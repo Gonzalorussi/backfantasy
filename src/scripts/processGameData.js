@@ -1,14 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
-const axios = require('axios');
 require('dotenv').config();
-
-const hl = process.argv[2] || 'en-US';
-const startingTime = process.argv[2] || '025-06-07T18:00:00Z';
 
 const { getWindowData } = require('../services/objectivesService');
 const { getDetails } = require('../services/detailsService');
+
+const hl = 'en-US';
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -29,15 +27,20 @@ rl.question('📁 Ingresá el nombre del archivo (sin .json) en /src/data/series
     if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
     const objectives = [];
-    const playerStats = [];
+    const playerStats = [];    
+
+    if (!serieData.startTime) throw new Error('La serie no tiene startTime definido.');
+    const adjustedStartTime = new Date(new Date(serieData.startTime).getTime() + 5 * 60 * 60 * 1000).toISOString();
+    console.log(`\n🕒 StartingTime usado para todos los endpoints: ${adjustedStartTime}`);
 
     for (const game of serieData.games) {
-      const gameId = game.gameId;
+      const { gameId, state } = game;
+
+      if (state === 'unneeded') continue;
 
       console.log(`\n🎯 Procesando objetivos para gameId ${gameId}...`);
       try {
-        const objData = await getWindowData(gameId, startingTime, hl);
-        console.log(objData);
+        const objData = await getWindowData(gameId, adjustedStartTime, hl);
         objectives.push(objData);
       } catch (err) {
         console.error(`❌ Error en objetivos para ${gameId}: ${err.message}`);
@@ -45,7 +48,7 @@ rl.question('📁 Ingresá el nombre del archivo (sin .json) en /src/data/series
 
       console.log(`\n📊 Procesando detalles para gameId ${gameId}...`);
       try {
-        const detailData = await getDetails(gameId, hl, startingTime);
+        const detailData = await getDetails(gameId, hl, adjustedStartTime);
         playerStats.push({ gameId, detailData });
       } catch (err) {
         console.error(`❌ Error en detalles para ${gameId}: ${err.message}`);

@@ -1,7 +1,7 @@
 const axios = require('axios');
 
-const getWindowData = async (gameId, startingTime) => {
-  const url = `https://feed.lolesports.com/livestats/v1/window/${gameId}?startingTime=${startingTime}`;
+const getWindowData = async (gameId, startingTime, hl) => {
+  const url = `https://feed.lolesports.com/livestats/v1/window/${gameId}?hl=${hl}&startingTime=${startingTime}`;
 
   try {
     const response = await axios.get(url);
