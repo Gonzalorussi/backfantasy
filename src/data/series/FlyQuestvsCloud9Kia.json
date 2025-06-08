@@ -1,0 +1,52 @@
+{
+  "serieId": "114217030657972311",
+  "league": "LTA North",
+  "teams": [
+    "FlyQuest",
+    "Cloud9 Kia"
+  ],
+  "startTime": "2025-06-07T20:00:00Z",
+  "state": "completed",
+  "games": [
+    {
+      "gameId": "114217030657972312",
+      "state": "completed",
+      "teams": {
+        "blue": "FlyQuest",
+        "red": "Cloud9 Kia"
+      }
+    },
+    {
+      "gameId": "114217030657972313",
+      "state": "completed",
+      "teams": {
+        "blue": "Cloud9 Kia",
+        "red": "FlyQuest"
+      }
+    },
+    {
+      "gameId": "114217030657972314",
+      "state": "completed",
+      "teams": {
+        "blue": "Cloud9 Kia",
+        "red": "FlyQuest"
+      }
+    },
+    {
+      "gameId": "114217030657972315",
+      "state": "completed",
+      "teams": {
+        "blue": "FlyQuest",
+        "red": "Cloud9 Kia"
+      }
+    },
+    {
+      "gameId": "114217030657972316",
+      "state": "completed",
+      "teams": {
+        "blue": "FlyQuest",
+        "red": "Cloud9 Kia"
+      }
+    }
+  ]
+}

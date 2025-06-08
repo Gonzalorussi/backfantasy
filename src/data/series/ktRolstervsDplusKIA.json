@@ -1,0 +1,52 @@
+{
+  "serieId": "113503303285384355",
+  "league": "LCK",
+  "teams": [
+    "kt Rolster",
+    "Dplus KIA"
+  ],
+  "startTime": "2025-06-07T06:00:00Z",
+  "state": "completed",
+  "games": [
+    {
+      "gameId": "113503303285384356",
+      "state": "completed",
+      "teams": {
+        "blue": "kt Rolster",
+        "red": "Dplus KIA"
+      }
+    },
+    {
+      "gameId": "113503303285384357",
+      "state": "completed",
+      "teams": {
+        "blue": "Dplus KIA",
+        "red": "kt Rolster"
+      }
+    },
+    {
+      "gameId": "113503303285384358",
+      "state": "completed",
+      "teams": {
+        "blue": "Dplus KIA",
+        "red": "kt Rolster"
+      }
+    },
+    {
+      "gameId": "113503303285384359",
+      "state": "unneeded",
+      "teams": {
+        "blue": "kt Rolster",
+        "red": "Dplus KIA"
+      }
+    },
+    {
+      "gameId": "113503303285384360",
+      "state": "unneeded",
+      "teams": {
+        "blue": "Dplus KIA",
+        "red": "kt Rolster"
+      }
+    }
+  ]
+}

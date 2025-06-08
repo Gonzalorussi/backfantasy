@@ -1,0 +1,52 @@
+{
+  "serieId": "114278164472093099",
+  "league": "LPL",
+  "teams": [
+    "Xi'an Team WE",
+    "Beijing JDG Intel Esports"
+  ],
+  "startTime": "2025-06-05T09:00:00Z",
+  "state": "completed",
+  "games": [
+    {
+      "gameId": "114278164472093100",
+      "state": "completed",
+      "teams": {
+        "blue": "Xi'an Team WE",
+        "red": "Beijing JDG Intel Esports"
+      }
+    },
+    {
+      "gameId": "114278164472093101",
+      "state": "completed",
+      "teams": {
+        "blue": "Beijing JDG Intel Esports",
+        "red": "Xi'an Team WE"
+      }
+    },
+    {
+      "gameId": "114278164472093102",
+      "state": "completed",
+      "teams": {
+        "blue": "Xi'an Team WE",
+        "red": "Beijing JDG Intel Esports"
+      }
+    },
+    {
+      "gameId": "114278164472093103",
+      "state": "completed",
+      "teams": {
+        "blue": "Beijing JDG Intel Esports",
+        "red": "Xi'an Team WE"
+      }
+    },
+    {
+      "gameId": "114278164472093104",
+      "state": "unneeded",
+      "teams": {
+        "blue": "Beijing JDG Intel Esports",
+        "red": "Xi'an Team WE"
+      }
+    }
+  ]
+}

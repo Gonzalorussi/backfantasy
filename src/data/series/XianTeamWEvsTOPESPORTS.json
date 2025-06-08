@@ -1,0 +1,52 @@
+{
+  "serieId": "114278164472093117",
+  "league": "LPL",
+  "teams": [
+    "Xi'an Team WE",
+    "TOPESPORTS"
+  ],
+  "startTime": "2025-06-08T09:00:00Z",
+  "state": "completed",
+  "games": [
+    {
+      "gameId": "114278164472093118",
+      "state": "completed",
+      "teams": {
+        "blue": "Xi'an Team WE",
+        "red": "TOPESPORTS"
+      }
+    },
+    {
+      "gameId": "114278164472093119",
+      "state": "completed",
+      "teams": {
+        "blue": "TOPESPORTS",
+        "red": "Xi'an Team WE"
+      }
+    },
+    {
+      "gameId": "114278164472093120",
+      "state": "completed",
+      "teams": {
+        "blue": "Xi'an Team WE",
+        "red": "TOPESPORTS"
+      }
+    },
+    {
+      "gameId": "114278164472093121",
+      "state": "completed",
+      "teams": {
+        "blue": "TOPESPORTS",
+        "red": "Xi'an Team WE"
+      }
+    },
+    {
+      "gameId": "114278164472093122",
+      "state": "completed",
+      "teams": {
+        "blue": "Xi'an Team WE",
+        "red": "TOPESPORTS"
+      }
+    }
+  ]
+}

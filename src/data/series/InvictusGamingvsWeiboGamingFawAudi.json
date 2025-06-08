@@ -1,0 +1,52 @@
+{
+  "serieId": "114278164472093111",
+  "league": "LPL",
+  "teams": [
+    "Invictus Gaming",
+    "WeiboGaming Faw Audi"
+  ],
+  "startTime": "2025-06-07T09:00:00Z",
+  "state": "completed",
+  "games": [
+    {
+      "gameId": "114278164472093112",
+      "state": "completed",
+      "teams": {
+        "blue": "Invictus Gaming",
+        "red": "WeiboGaming Faw Audi"
+      }
+    },
+    {
+      "gameId": "114278164472093113",
+      "state": "completed",
+      "teams": {
+        "blue": "WeiboGaming Faw Audi",
+        "red": "Invictus Gaming"
+      }
+    },
+    {
+      "gameId": "114278164472093114",
+      "state": "completed",
+      "teams": {
+        "blue": "Invictus Gaming",
+        "red": "WeiboGaming Faw Audi"
+      }
+    },
+    {
+      "gameId": "114278164472093115",
+      "state": "completed",
+      "teams": {
+        "blue": "WeiboGaming Faw Audi",
+        "red": "Invictus Gaming"
+      }
+    },
+    {
+      "gameId": "114278164472093116",
+      "state": "unneeded",
+      "teams": {
+        "blue": "Invictus Gaming",
+        "red": "WeiboGaming Faw Audi"
+      }
+    }
+  ]
+}
