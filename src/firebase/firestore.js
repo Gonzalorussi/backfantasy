@@ -9,12 +9,30 @@ if (!admin.apps.length) {
 
 const db = admin.firestore();
 
-exports.updatePlayerScore = async (playerId, ronda, score) => {
-  const playerRef = db.collection('jugadores').doc(playerId);
+exports.setPlayerAverageScore = async (playerName, averageScore, ronda) => {
+  const jugadoresRef = db.collection('jugadores');
+  const querySnapshot = await jugadoresRef.where('summonername', '==', playerName).get();
+
+  if (querySnapshot.empty) {
+    console.warn(`Jugador ${playerName} no encontrado en Firestore.`);
+    return;
+  }
+
+  const playerDoc = querySnapshot.docs[0];
+  const playerRef = playerDoc.ref;
+  const playerData = playerDoc.data();
+
+  const totalPuntosPrevio = playerData.totalpuntos || 0;
+  console.log({ totalPuntosPrevio, averageScore });
+
+
+  const nuevoTotal = parseFloat((averageScore).toFixed(2));
+
   await playerRef.set({
+    totalpuntos: nuevoTotal,
     puntajeronda: {
-      [`ronda${ronda}`]: score,
+      [`ronda${ronda}`]: parseFloat(averageScore.toFixed(2)),
     },
-    totalpuntos: admin.firestore.FieldValue.increment(score),
   }, { merge: true });
 };
+

@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
 const db = require('../firebase/firebaseConfig'); // Importamos la configuración de Firestore
-const { updatePlayerScore } = require('../firebase/firestore');  // Cambia la ruta
+const { setPlayerAverageScore } = require('../firebase/firestore');  // Cambia la ruta
 
 function prompt(query) {
   const rl = readline.createInterface({
@@ -18,6 +18,7 @@ function prompt(query) {
 }
 
 async function calcularPuntajes() {
+  const ronda = await prompt('¿Número de ronda a guardar?: ');
   const gamedataPath = path.join(__dirname, '..', 'data', 'gamedata');
   const matches = fs.readdirSync(gamedataPath);
 
@@ -156,9 +157,6 @@ async function calcularPuntajes() {
         gameScores[info.name] = score;
         puntajesFinales[info.name] = puntajesFinales[info.name] || [];
         puntajesFinales[info.name].push(score);
-
-        // Grabar puntaje en Firestore utilizando la función updatePlayerScore
-        await updatePlayerScore(info.name, playerStats.gameId, score);
       }
 
       console.log(`\n📊 Puntaje game ${playerStats.gameId}:`);
@@ -169,10 +167,15 @@ async function calcularPuntajes() {
   }
 
   console.log(`\n🏁 Puntaje final promedio:`);
-  Object.entries(puntajesFinales).forEach(([name, scores]) => {
+
+   for (const [name, scores] of Object.entries(puntajesFinales)) {
     const avg = scores.reduce((a, b) => a + b, 0) / scores.length;
     console.log(`${name}: ${avg.toFixed(2)}`);
-  });
+    await setPlayerAverageScore(name, avg, ronda);
+
+    // Grabar puntaje en Firestore utilizando la función setPlayerAverageScore
+    await setPlayerAverageScore(name, avg, ronda);
+  }
 
   process.exit();
 }
