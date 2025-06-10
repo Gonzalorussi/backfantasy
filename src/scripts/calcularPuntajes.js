@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
+const db = require('../firebase/firebaseConfig'); // Importamos la configuración de Firestore
+const { updatePlayerScore } = require('../firebase/firestore');  // Cambia la ruta
 
 function prompt(query) {
   const rl = readline.createInterface({
@@ -107,20 +109,20 @@ async function calcularPuntajes() {
         if (deaths === 0 && kda >= 5) score += 3;
 
         if (info.role === 'top') {
-        if (championDamageShare >= 0.25) score += 2;
+          if (championDamageShare >= 0.25) score += 2;
 
-        const enemyTop = tops.find(t => t.team !== info.team);
-        if (enemyTop) {
-          const enemyStats = players.find(pl => pl.participantId === enemyTop.participantId);
-          if (enemyStats && typeof totalGoldEarned === 'number' && typeof enemyStats.totalGoldEarned === 'number') {
-            const diff = totalGoldEarned - enemyStats.totalGoldEarned;
-            if (diff >= 2000) {
-              score += 2;
+          const enemyTop = tops.find(t => t.team !== info.team);
+          if (enemyTop) {
+            const enemyStats = players.find(pl => pl.participantId === enemyTop.participantId);
+            if (enemyStats && typeof totalGoldEarned === 'number' && typeof enemyStats.totalGoldEarned === 'number') {
+              const diff = totalGoldEarned - enemyStats.totalGoldEarned;
+              if (diff >= 2000) {
+                score += 2;
+              }
+            } else {
+              console.warn(`⚠️ No se pudo calcular diferencia de oro entre tops: ${info.name} vs ${enemyTop.name}`);
             }
-          } else {
-            console.warn(`⚠️ No se pudo calcular diferencia de oro entre tops: ${info.name} vs ${enemyTop.name}`);
           }
-        }
         }
 
         if (info.role === 'jungle') {
@@ -154,6 +156,9 @@ async function calcularPuntajes() {
         gameScores[info.name] = score;
         puntajesFinales[info.name] = puntajesFinales[info.name] || [];
         puntajesFinales[info.name].push(score);
+
+        // Grabar puntaje en Firestore utilizando la función updatePlayerScore
+        await updatePlayerScore(info.name, playerStats.gameId, score);
       }
 
       console.log(`\n📊 Puntaje game ${playerStats.gameId}:`);
