@@ -23,6 +23,7 @@ if (isNaN(numeroRonda) || numeroRonda < 1 || numeroRonda > 9) {
 
 const rondaKey = `ronda${numeroRonda}`;
 const rondaPuntosKey = `ronda${numeroRonda}Puntos`;
+const rondaPuntosJugadoresKey = `ronda${numeroRonda}PuntosJugadores`;
 const rondasPuntosKeys = Array.from({ length: 9 }, (_, i) => `ronda${i + 1}Puntos`);
 
 async function calcularPuntajeRonda() {
@@ -36,24 +37,35 @@ async function calcularPuntajeRonda() {
   for (const rosterDoc of rostersSnap.docs) {
     const rosterData = rosterDoc.data();
 
-    if (rosterData.hasOwnProperty(rondaPuntosKey)) {
-      if (verbose) console.log(chalk.blue(`🔄 Recovery: ${rosterData.userid} ya tiene ${rondaPuntosKey}. Se omite.`));
-      rostersRecovery++;
-      continue;
-    }
-
+    // Ya no validamos si existe rondaXPuntos en rosters, porque no lo vamos a guardar más ahí
     const rondaConfirmada = rosterData[rondaKey];
     if (!rondaConfirmada) {
-      console.log(chalk.yellow(`⚠️ ${rosterData.userid} no tiene roster confirmado en ${rondaKey}. Puntaje 0 asignado.`));
-      await db.collection('rosters').doc(rosterDoc.id).update({
-        [rondaPuntosKey]: 0
-      });
+      console.log(chalk.yellow(`⚠️ ${rosterData.userid} no tiene roster confirmado en ${rondaKey}. Puntaje 0 asignado en equipos.`));
+
+      // Aún así actualizamos en equipos con 0
+      const equiposSnap = await db.collection('equipos').where('userid', '==', rosterData.userid).get();
+      if (!equiposSnap.empty) {
+        const equipoDoc = equiposSnap.docs[0];
+        const equipoData = equipoDoc.data();
+
+        const totalActual = equipoData.totalpuntos || 0;
+
+        await db.collection('equipos').doc(equipoDoc.id).update({
+          [`puntajesronda.${rondaKey}`]: 0,
+          totalpuntos: totalActual
+        });
+
+        console.log(chalk.cyan(`📊 Equipo ${equipoData.nombreequipo} actualizado con 0.`));
+      }
+
       rostersSaltados++;
       continue;
     }
 
     let puntajeTotalRonda = 0;
     const roles = ['top', 'jungle', 'mid', 'bottom', 'support'];
+
+    const updateRonda = {};
 
     for (const rol of roles) {
       const jugador = rondaConfirmada[rol];
@@ -63,25 +75,46 @@ async function calcularPuntajeRonda() {
           const jugadorData = jugadorDoc.data();
           const puntajeJugador = jugadorData?.puntajeronda?.[rondaKey] || 0;
           puntajeTotalRonda += puntajeJugador;
+
+          updateRonda[`${rondaKey}.${rol}.puntos`] = puntajeJugador;
+
           if (verbose) console.log(chalk.green(`✅ ${jugador.nombre} (${rol}): ${puntajeJugador}`));
         } else {
           console.log(chalk.red(`❌ Jugador no encontrado: ${jugador.id} (${jugador.nombre})`));
           jugadoresNoEncontrados++;
+
+          updateRonda[`${rondaKey}.${rol}.puntos`] = 0;
         }
       }
     }
 
-    await db.collection('rosters').doc(rosterDoc.id).update({
-      [rondaPuntosKey]: puntajeTotalRonda
-    });
+    // Solo actualizamos el roster con los puntajes individuales de cada jugador
+    await db.collection('rosters').doc(rosterDoc.id).update(updateRonda);
 
     console.log(chalk.green(`✅ ${rosterData.userid} - ${rondaKey}: ${puntajeTotalRonda}`));
     rostersProcesados++;
+
+    // --- Actualizamos el documento de equipos ---
+    const equiposSnap = await db.collection('equipos').where('usuarioid', '==', rosterData.userid).get();
+    if (!equiposSnap.empty) {
+      const equipoDoc = equiposSnap.docs[0];
+      const equipoData = equipoDoc.data();
+
+      const totalActual = equipoData.totalpuntos || 0;
+
+      await db.collection('equipos').doc(equipoDoc.id).update({
+        [`puntajesronda.${rondaKey}`]: puntajeTotalRonda,
+        totalpuntos: totalActual + puntajeTotalRonda
+      });
+
+      console.log(chalk.cyan(`📊 Equipo ${equipoData.nombreequipo} actualizado.`));
+    } else {
+      console.log(chalk.red(`❌ No se encontró equipo para userid ${rosterData.userid}`));
+    }
   }
 
   console.log(chalk.blue(`🎯 Puntajes de ronda ${rondaKey} calculados para ${rostersProcesados} rosters.`));
   console.log(chalk.yellow(`⚠️ ${rostersSaltados} rosters no tenían roster confirmado.`));
-  console.log(chalk.blue(`🔄 ${rostersRecovery} rosters fueron omitidos por recovery mode.`));
   console.log(chalk.red(`❌ ${jugadoresNoEncontrados} jugadores no fueron encontrados en la colección.`));
 }
 

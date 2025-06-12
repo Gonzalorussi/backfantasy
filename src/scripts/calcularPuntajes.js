@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
+const chalk = require('chalk');
 const db = require('../firebase/firebaseConfig'); // Importamos la configuración de Firestore
 const { setPlayerAverageScore } = require('../firebase/firestore');  // Cambia la ruta
 
@@ -10,7 +11,7 @@ function prompt(query) {
     output: process.stdout,
   });
   return new Promise((resolve) =>
-    rl.question(query, (ans) => {
+    rl.question(chalk.cyan(query), (ans) => { // preguntas en cian para resaltar input
       rl.close();
       resolve(ans);
     })
@@ -19,6 +20,8 @@ function prompt(query) {
 
 async function calcularPuntajes() {
   const ronda = await prompt('¿Número de ronda a guardar?: ');
+  console.log(chalk.yellowBright(`\n🚀 Iniciando cálculo de puntajes para ronda ${ronda}...\n`));
+
   const gamedataPath = path.join(__dirname, '..', 'data', 'gamedata');
   const matches = fs.readdirSync(gamedataPath);
 
@@ -50,7 +53,9 @@ async function calcularPuntajes() {
         }
       }
 
-      console.log(`\n🧮 Calculando puntajes para el game: ${playerStats.gameId}`);
+      console.log(chalk.magentaBright(`\n🧮 Calculando puntajes para el game: ${playerStats.gameId}\n`));
+
+      // ... (código sin cambios para filtrar mids, bots, tops, supports)
 
       const mids = Object.entries(participantInfo)
         .filter(([_, info]) => info.role === 'mid')
@@ -121,7 +126,7 @@ async function calcularPuntajes() {
                 score += 2;
               }
             } else {
-              console.warn(`⚠️ No se pudo calcular diferencia de oro entre tops: ${info.name} vs ${enemyTop.name}`);
+              console.warn(chalk.yellow(`⚠️ No se pudo calcular diferencia de oro entre tops: ${info.name} vs ${enemyTop.name}`));
             }
           }
         }
@@ -159,23 +164,22 @@ async function calcularPuntajes() {
         puntajesFinales[info.name].push(score);
       }
 
-      console.log(`\n📊 Puntaje game ${playerStats.gameId}:`);
+      console.log(chalk.greenBright(`\n📊 Puntaje game ${playerStats.gameId}:`));
       Object.entries(gameScores).forEach(([name, score]) => {
-        console.log(`${name}: ${score.toFixed(2)}`);
+        console.log(chalk.white(`${name}: `) + chalk.green(score.toFixed(2)));
       });
     }
   }
 
-  console.log(`\n🏁 Puntaje final promedio:`);
+  console.log(chalk.yellowBright(`\n🏁 Puntaje final promedio:`));
 
-   for (const [name, scores] of Object.entries(puntajesFinales)) {
+  for (const [name, scores] of Object.entries(puntajesFinales)) {
     const avg = scores.reduce((a, b) => a + b, 0) / scores.length;
-    console.log(`${name}: ${avg.toFixed(2)}`);
-    await setPlayerAverageScore(name, avg, ronda);
-
-    // Grabar puntaje en Firestore utilizando la función setPlayerAverageScore
+    console.log(chalk.white(`${name}: `) + chalk.blueBright(avg.toFixed(2)));
     await setPlayerAverageScore(name, avg, ronda);
   }
+
+  console.log(chalk.magentaBright('\n✨ Cálculo terminado. ¡Datos guardados correctamente!\n'));
 
   process.exit();
 }
