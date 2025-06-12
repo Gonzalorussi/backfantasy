@@ -5,3 +5,4 @@ axios
 dotenv
 nodemon
 firebase-admin
+chalk@4
