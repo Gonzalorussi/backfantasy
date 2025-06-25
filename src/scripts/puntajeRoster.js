@@ -16,6 +16,10 @@ if (args.length === 0) {
 const numeroRonda = parseInt(args[0]);
 const verbose = args.includes('verbose');
 
+console.log('Args:', args);
+console.log('numeroRonda:', numeroRonda);
+console.log('Ronda key:', `top50ronda${numeroRonda}`);
+
 if (isNaN(numeroRonda) || numeroRonda < 1 || numeroRonda > 9) {
   console.error(chalk.red('⚠️  El número de ronda debe estar entre 1 y 9.'));
   process.exit(1);
@@ -25,6 +29,9 @@ const rondaKey = `ronda${numeroRonda}`;
 const rondaPuntosKey = `ronda${numeroRonda}Puntos`;
 const rondaPuntosJugadoresKey = `ronda${numeroRonda}PuntosJugadores`;
 const rondasPuntosKeys = Array.from({ length: 9 }, (_, i) => `ronda${i + 1}Puntos`);
+
+const rostersSinRosterConfirmado = [];
+const rostersSinEquipo = [];
 
 async function calcularPuntajeRonda() {
   const rostersSnap = await db.collection('rosters').get();
@@ -40,6 +47,7 @@ async function calcularPuntajeRonda() {
     // Ya no validamos si existe rondaXPuntos en rosters, porque no lo vamos a guardar más ahí
     const rondaConfirmada = rosterData[rondaKey];
     if (!rondaConfirmada) {
+      rostersSinRosterConfirmado.push(rosterData.userid);
       console.log(chalk.yellow(`⚠️ ${rosterData.userid} no tiene roster confirmado en ${rondaKey}. Puntaje 0 asignado en equipos.`));
 
       // Aún así actualizamos en equipos con 0
@@ -56,9 +64,14 @@ async function calcularPuntajeRonda() {
         });
 
         console.log(chalk.cyan(`📊 Equipo ${equipoData.nombreequipo} actualizado con 0.`));
+      }else{
+        rostersSinEquipo.push(rosterData.userid);
+        console.log(chalk.red(`❌ No se encontró equipo para userid ${rosterData.userid}, se omite.`));
+        continue;
       }
 
       rostersSaltados++;
+      console.log(chalk.gray(`🛑 ${rosterData.userid} omitido del ranking por falta de roster confirmado.`));
       continue;
     }
 
@@ -113,6 +126,15 @@ async function calcularPuntajeRonda() {
     }
   }
 
+  if (rostersSinRosterConfirmado.length > 0) {
+    console.log(chalk.yellow(`\n📋 Los siguientes equipos aún NO CONFIRMARON su roster:`));
+    console.log(chalk.yellow(rostersSinRosterConfirmado.join(', ')));
+  }
+  if (rostersSinEquipo.length > 0) {
+    console.log(chalk.red(`\n📋 No se encontró equipo para los siguientes rosters:`));
+    console.log(chalk.red(rostersSinEquipo.join(', ')));
+  }
+
   console.log(chalk.blue(`🎯 Puntajes de ronda ${rondaKey} calculados para ${rostersProcesados} rosters.`));
   console.log(chalk.yellow(`⚠️ ${rostersSaltados} rosters no tenían roster confirmado.`));
   console.log(chalk.red(`❌ ${jugadoresNoEncontrados} jugadores no fueron encontrados en la colección.`));
@@ -143,11 +165,92 @@ async function calcularTotales() {
   console.log(chalk.blue(`🎯 Totales acumulados actualizados para ${rostersProcesados} rosters.`));
 }
 
+async function generarRankings() {
+  // Obtener top 50 equipos para la ronda
+  const top50RondaSnap = await db
+    .collection('equipos')
+    .orderBy(`puntajesronda.ronda${numeroRonda}`, 'desc')
+    .limit(100)
+    .get();
+
+  const top50Ronda = [];
+
+  for (const docSnap of top50RondaSnap.docs) {
+  const data = docSnap.data();
+  const puntosRonda = data.puntajesronda?.[`ronda${numeroRonda}`];
+
+  if (puntosRonda !== undefined && data.nombreequipo) {
+    top50Ronda.push({
+      id: docSnap.id,
+      nombreequipo: data.nombreequipo,
+      usuarioid: data.usuarioid,
+      puntos: puntosRonda,
+      escudoid: data.escudoid || null,
+      rellenoid: data.rellenoid || null,
+      colorprimario: data.colorprimario || null,
+      colorsecundario: data.colorsecundario || null,
+    });
+  } else {
+    console.log(chalk.gray(`🛑 Equipo omitido del ranking ronda: ${docSnap.id}`));
+  }
+}
+
+  // Obtener top 50 equipos por puntaje acumulado
+  const top50AcumuladoSnap = await db
+    .collection('equipos')
+    .orderBy('totalpuntos', 'desc')
+    .limit(100)
+    .get();
+
+  const top50Acumulado = [];
+
+   for (const docSnap of top50AcumuladoSnap.docs) {
+  const data = docSnap.data();
+
+  if (data.totalpuntos !== undefined && data.nombreequipo) {
+    top50Acumulado.push({
+      id: docSnap.id,
+      nombreequipo: data.nombreequipo,
+      usuarioid: data.usuarioid,
+      puntos: data.totalpuntos,
+      escudoid: data.escudoid || null,
+      rellenoid: data.rellenoid || null,
+      colorprimario: data.colorprimario || null,
+      colorsecundario: data.colorsecundario || null,
+    });
+  } else {
+    console.log(chalk.gray(`🛑 Equipo omitido del ranking acumulado: ${docSnap.id}`));
+  }
+}
+
+  console.log('📦 Generando ranking de ronda...');
+console.log('ID documento ranking ronda:', `top50ronda${numeroRonda}`);
+console.log('Primer equipo:', top50Ronda[0]);
+
+  // Escribir documento top50ronda{numeroRonda}
+  await db.collection('rankings').doc(`top50ronda${numeroRonda}`).set({
+    equipos: top50Ronda.slice(0, 50),
+    updatedAt: admin.firestore.FieldValue.serverTimestamp()
+  });
+  console.log('📦 Generando ranking acumulado...');
+console.log('ID documento ranking acumulado: top50acumulado');
+console.log('Primer equipo:', top50Acumulado[0]);
+
+  // Escribir documento top50acumulado
+  await db.collection('rankings').doc('top50acumulado').set({
+    equipos: top50Acumulado.slice(0, 50),
+    updatedAt: admin.firestore.FieldValue.serverTimestamp()
+  });
+
+  console.log(`🏆 Rankings actualizados en Firestore para ronda ${numeroRonda}`);
+  }
+
 async function master() {
   console.log(chalk.magenta(`🚀 Iniciando cálculo de ronda ${numeroRonda}...`));
   const inicio = Date.now();
   await calcularPuntajeRonda();
   await calcularTotales();
+  await generarRankings();
   const fin = Date.now();
   const duracion = ((fin - inicio) / 1000).toFixed(2);
   console.log(chalk.magenta(`🏁 Proceso COMPLETO en ${duracion} segundos.`));
