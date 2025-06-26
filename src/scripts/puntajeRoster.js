@@ -18,7 +18,7 @@ const verbose = args.includes('verbose');
 
 console.log('Args:', args);
 console.log('numeroRonda:', numeroRonda);
-console.log('Ronda key:', `top50ronda${numeroRonda}`);
+console.log('Ronda key:', `rankingronda${numeroRonda}`);
 
 if (isNaN(numeroRonda) || numeroRonda < 1 || numeroRonda > 9) {
   console.error(chalk.red('⚠️  El número de ronda debe estar entre 1 y 9.'));
@@ -131,8 +131,13 @@ async function calcularPuntajeRonda() {
     console.log(chalk.yellow(rostersSinRosterConfirmado.join(', ')));
   }
   if (rostersSinEquipo.length > 0) {
-    console.log(chalk.red(`\n📋 No se encontró equipo para los siguientes rosters:`));
-    console.log(chalk.red(rostersSinEquipo.join(', ')));
+    console.log(chalk.red(`\n📋 No se encontró equipo para los siguientes ${rostersSinEquipo.length} rosters:`));
+
+  const chunkSize = 5;
+  for (let i = 0; i < rostersSinEquipo.length; i += chunkSize) {
+    const chunk = rostersSinEquipo.slice(i, i + chunkSize);
+    console.log(chalk.red('  🔸 ' + chunk.join(', ')));
+  }
   }
 
   console.log(chalk.blue(`🎯 Puntajes de ronda ${rondaKey} calculados para ${rostersProcesados} rosters.`));
@@ -166,21 +171,20 @@ async function calcularTotales() {
 }
 
 async function generarRankings() {
-  // Obtener top 50 equipos para la ronda
-  const top50RondaSnap = await db
+  // Obtener ranking equipos para la ronda
+  const rankingRondaSnap = await db
     .collection('equipos')
     .orderBy(`puntajesronda.ronda${numeroRonda}`, 'desc')
-    .limit(100)
     .get();
 
-  const top50Ronda = [];
+  const rankingRonda = [];
 
-  for (const docSnap of top50RondaSnap.docs) {
+  for (const docSnap of rankingRondaSnap.docs) {
   const data = docSnap.data();
   const puntosRonda = data.puntajesronda?.[`ronda${numeroRonda}`];
 
   if (puntosRonda !== undefined && data.nombreequipo) {
-    top50Ronda.push({
+    rankingRonda.push({
       id: docSnap.id,
       nombreequipo: data.nombreequipo,
       usuarioid: data.usuarioid,
@@ -195,20 +199,24 @@ async function generarRankings() {
   }
 }
 
-  // Obtener top 50 equipos por puntaje acumulado
-  const top50AcumuladoSnap = await db
+const rankingRondaConPosicion = rankingRonda.map((equipo, index) => ({
+    ...equipo,
+    posicion: index + 1
+  }));
+
+  // Obtener ranking equipos por puntaje acumulado
+  const rankingAcumuladoSnap = await db
     .collection('equipos')
     .orderBy('totalpuntos', 'desc')
-    .limit(100)
     .get();
 
-  const top50Acumulado = [];
+  const rankingAcumulado = [];
 
-   for (const docSnap of top50AcumuladoSnap.docs) {
+   for (const docSnap of rankingAcumuladoSnap.docs) {
   const data = docSnap.data();
 
   if (data.totalpuntos !== undefined && data.nombreequipo) {
-    top50Acumulado.push({
+    rankingAcumulado.push({
       id: docSnap.id,
       nombreequipo: data.nombreequipo,
       usuarioid: data.usuarioid,
@@ -223,24 +231,39 @@ async function generarRankings() {
   }
 }
 
-  console.log('📦 Generando ranking de ronda...');
-console.log('ID documento ranking ronda:', `top50ronda${numeroRonda}`);
-console.log('Primer equipo:', top50Ronda[0]);
+const rankingAcumuladoConPosicion = rankingAcumulado.map((equipo, index) => ({
+    ...equipo,
+    posicion: index + 1
+  }));
 
-  // Escribir documento top50ronda{numeroRonda}
-  await db.collection('rankings').doc(`top50ronda${numeroRonda}`).set({
-    equipos: top50Ronda.slice(0, 50),
+console.log('📦 Generando ranking de ronda...');
+console.log('ID documento ranking ronda:', `rankingronda${numeroRonda}`);
+
+  // Escribir documento rankingronda{numeroRonda}
+  await db.collection('rankings').doc(`rankingronda${numeroRonda}`).set({
+    equipos: rankingRondaConPosicion,
     updatedAt: admin.firestore.FieldValue.serverTimestamp()
   });
   console.log('📦 Generando ranking acumulado...');
-console.log('ID documento ranking acumulado: top50acumulado');
-console.log('Primer equipo:', top50Acumulado[0]);
+console.log('ID documento ranking acumulado: rankingacumulado');
 
-  // Escribir documento top50acumulado
-  await db.collection('rankings').doc('top50acumulado').set({
-    equipos: top50Acumulado.slice(0, 50),
+  // Escribir documento rankingacumulado
+  await db.collection('rankings').doc('rankingacumulado').set({
+    equipos: rankingAcumuladoConPosicion,
     updatedAt: admin.firestore.FieldValue.serverTimestamp()
   });
+
+  // Guardar top 3 por ronda
+await db.collection('rankings').doc(`top3ronda${numeroRonda}`).set({
+  equipos: rankingRondaConPosicion.slice(0, 3),
+  updatedAt: admin.firestore.FieldValue.serverTimestamp()
+});
+
+// Guardar top 3 acumulado
+await db.collection('rankings').doc('top3acumulado').set({
+  equipos: rankingAcumuladoConPosicion.slice(0, 3),
+  updatedAt: admin.firestore.FieldValue.serverTimestamp()
+});
 
   console.log(`🏆 Rankings actualizados en Firestore para ronda ${numeroRonda}`);
   }
