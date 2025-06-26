@@ -9,7 +9,8 @@
     "fetch-series": "node src/scripts/testSeriesFetcher.js",
     "processGameData": "node src/scripts/processGameData.js",
     "calcularPuntajes": "node src/scripts/calcularPuntajes",
-    "puntajeRosters": "node src/scripts/puntajeRoster"
+    "puntajeRosters": "node src/scripts/puntajeRoster",
+    "rosterideal": "node src/scripts/rosterideal"
   },
   "keywords": [],
   "author": "",
