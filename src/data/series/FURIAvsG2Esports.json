@@ -1,0 +1,52 @@
+{
+  "serieId": "113470922764572270",
+  "league": "MSI",
+  "teams": [
+    "FURIA",
+    "G2 Esports"
+  ],
+  "startTime": "2025-06-27T19:00:00Z",
+  "state": "completed",
+  "games": [
+    {
+      "gameId": "113470922764572271",
+      "state": "completed",
+      "teams": {
+        "blue": "FURIA",
+        "red": "G2 Esports"
+      }
+    },
+    {
+      "gameId": "113470922764572272",
+      "state": "completed",
+      "teams": {
+        "blue": "G2 Esports",
+        "red": "FURIA"
+      }
+    },
+    {
+      "gameId": "113470922764572273",
+      "state": "completed",
+      "teams": {
+        "blue": "FURIA",
+        "red": "G2 Esports"
+      }
+    },
+    {
+      "gameId": "113470922764572274",
+      "state": "completed",
+      "teams": {
+        "blue": "G2 Esports",
+        "red": "FURIA"
+      }
+    },
+    {
+      "gameId": "113470922764572275",
+      "state": "completed",
+      "teams": {
+        "blue": "G2 Esports",
+        "red": "FURIA"
+      }
+    }
+  ]
+}

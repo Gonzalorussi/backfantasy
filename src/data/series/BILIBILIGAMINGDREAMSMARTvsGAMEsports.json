@@ -1,0 +1,52 @@
+{
+  "serieId": "113470922764572276",
+  "league": "MSI",
+  "teams": [
+    "BILIBILI GAMING DREAMSMART",
+    "GAM Esports"
+  ],
+  "startTime": "2025-06-28T00:00:00Z",
+  "state": "completed",
+  "games": [
+    {
+      "gameId": "113470922764572277",
+      "state": "completed",
+      "teams": {
+        "blue": "BILIBILI GAMING DREAMSMART",
+        "red": "GAM Esports"
+      }
+    },
+    {
+      "gameId": "113470922764572278",
+      "state": "completed",
+      "teams": {
+        "blue": "GAM Esports",
+        "red": "BILIBILI GAMING DREAMSMART"
+      }
+    },
+    {
+      "gameId": "113470922764572279",
+      "state": "completed",
+      "teams": {
+        "blue": "GAM Esports",
+        "red": "BILIBILI GAMING DREAMSMART"
+      }
+    },
+    {
+      "gameId": "113470922764572280",
+      "state": "unneeded",
+      "teams": {
+        "blue": "BILIBILI GAMING DREAMSMART",
+        "red": "GAM Esports"
+      }
+    },
+    {
+      "gameId": "113470922764572281",
+      "state": "unneeded",
+      "teams": {
+        "blue": "GAM Esports",
+        "red": "BILIBILI GAMING DREAMSMART"
+      }
+    }
+  ]
+}

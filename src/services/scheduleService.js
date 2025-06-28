@@ -17,7 +17,7 @@ const getScheduleData = async (hl = 'es-AR') => {
     }
 
     // Filtramos los eventos relevantes (por ejemplo, los que tienen estado upcoming o inProgress)
-    const ligasPermitidas = ['LTA South', 'LTA North','LEC', 'LCK', 'LPL', 'PCS'];
+    const ligasPermitidas = ['MSI'];
     const filtrados = eventos
       .filter(e => 
         ligasPermitidas.includes(e.league?.name) && 
