@@ -1,0 +1,52 @@
+{
+  "serieId": "113470922764572288",
+  "league": "MSI",
+  "teams": [
+    "GAM Esports",
+    "FURIA"
+  ],
+  "startTime": "2025-06-28T19:00:00Z",
+  "state": "completed",
+  "games": [
+    {
+      "gameId": "113470922764572289",
+      "state": "completed",
+      "teams": {
+        "blue": "GAM Esports",
+        "red": "FURIA"
+      }
+    },
+    {
+      "gameId": "113470922764572290",
+      "state": "completed",
+      "teams": {
+        "blue": "GAM Esports",
+        "red": "FURIA"
+      }
+    },
+    {
+      "gameId": "113470922764572291",
+      "state": "completed",
+      "teams": {
+        "blue": "GAM Esports",
+        "red": "FURIA"
+      }
+    },
+    {
+      "gameId": "113470922764572292",
+      "state": "completed",
+      "teams": {
+        "blue": "FURIA",
+        "red": "GAM Esports"
+      }
+    },
+    {
+      "gameId": "113470922764572293",
+      "state": "completed",
+      "teams": {
+        "blue": "FURIA",
+        "red": "GAM Esports"
+      }
+    }
+  ]
+}

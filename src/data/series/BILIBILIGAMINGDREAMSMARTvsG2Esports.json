@@ -1,0 +1,52 @@
+{
+  "serieId": "113470922764572282",
+  "league": "MSI",
+  "teams": [
+    "BILIBILI GAMING DREAMSMART",
+    "G2 Esports"
+  ],
+  "startTime": "2025-06-29T00:00:00Z",
+  "state": "completed",
+  "games": [
+    {
+      "gameId": "113470922764572283",
+      "state": "completed",
+      "teams": {
+        "blue": "BILIBILI GAMING DREAMSMART",
+        "red": "G2 Esports"
+      }
+    },
+    {
+      "gameId": "113470922764572284",
+      "state": "completed",
+      "teams": {
+        "blue": "G2 Esports",
+        "red": "BILIBILI GAMING DREAMSMART"
+      }
+    },
+    {
+      "gameId": "113470922764572285",
+      "state": "completed",
+      "teams": {
+        "blue": "G2 Esports",
+        "red": "BILIBILI GAMING DREAMSMART"
+      }
+    },
+    {
+      "gameId": "113470922764572286",
+      "state": "unneeded",
+      "teams": {
+        "blue": "G2 Esports",
+        "red": "BILIBILI GAMING DREAMSMART"
+      }
+    },
+    {
+      "gameId": "113470922764572287",
+      "state": "unneeded",
+      "teams": {
+        "blue": "BILIBILI GAMING DREAMSMART",
+        "red": "G2 Esports"
+      }
+    }
+  ]
+}

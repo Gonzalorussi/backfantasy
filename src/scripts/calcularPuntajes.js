@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
 const chalk = require('chalk');
-const db = require('../firebase/firebaseConfig'); // Importamos la configuración de Firestore
-const { setPlayerAverageScore } = require('../firebase/firestore');  // Cambia la ruta
+const db = require('../firebase/firebaseConfig');
+const { setPlayerAverageScore } = require('../firebase/firestore');
 
 function prompt(query) {
   const rl = readline.createInterface({
@@ -11,7 +11,7 @@ function prompt(query) {
     output: process.stdout,
   });
   return new Promise((resolve) =>
-    rl.question(chalk.cyan(query), (ans) => { // preguntas en cian para resaltar input
+    rl.question(chalk.cyan(query), (ans) => {
       rl.close();
       resolve(ans);
     })
@@ -26,6 +26,14 @@ async function calcularPuntajes() {
   const matches = fs.readdirSync(gamedataPath);
 
   const puntajesFinales = {};
+  const rondaField = `ronda${ronda}`;
+  const mejoresPorRol = {
+    top: { puntaje: -Infinity, valor: Infinity, jugador: null },
+    jungle: { puntaje: -Infinity, valor: Infinity, jugador: null },
+    mid: { puntaje: -Infinity, valor: Infinity, jugador: null },
+    bottom: { puntaje: -Infinity, valor: Infinity, jugador: null },
+    support: { puntaje: -Infinity, valor: Infinity, jugador: null },
+  };
 
   for (const matchFolder of matches) {
     const matchPath = path.join(gamedataPath, matchFolder);
@@ -35,7 +43,6 @@ async function calcularPuntajes() {
     for (let i = 0; i < playerStatsArray.length; i++) {
       const playerStats = playerStatsArray[i];
       const objectives = objectivesArray[i];
-
       const detailFrames = playerStats.detailData?.frames;
       if (!detailFrames) continue;
 
@@ -48,49 +55,33 @@ async function calcularPuntajes() {
           participantInfo[player.participantId] = {
             name: player.summonerName,
             role: player.role,
-            team: team,
+            team,
           };
         }
       }
 
       console.log(chalk.magentaBright(`\n🧮 Calculando puntajes para el game: ${playerStats.gameId}\n`));
 
-      // ... (código sin cambios para filtrar mids, bots, tops, supports)
-
-      const mids = Object.entries(participantInfo)
-        .filter(([_, info]) => info.role === 'mid')
-        .map(([id, info]) => ({ ...info, participantId: Number(id) }));
-
-      const bots = Object.entries(participantInfo)
-        .filter(([_, info]) => info.role === 'bottom')
-        .map(([id, info]) => ({ ...info, participantId: Number(id) }));
-
-      const tops = Object.entries(participantInfo)
-        .filter(([_, info]) => info.role === 'top')
-        .map(([id, info]) => ({ ...info, participantId: Number(id) }));
+      const mids = Object.entries(participantInfo).filter(([_, i]) => i.role === 'mid').map(([id, i]) => ({ ...i, participantId: Number(id) }));
+      const bots = Object.entries(participantInfo).filter(([_, i]) => i.role === 'bottom').map(([id, i]) => ({ ...i, participantId: Number(id) }));
+      const tops = Object.entries(participantInfo).filter(([_, i]) => i.role === 'top').map(([id, i]) => ({ ...i, participantId: Number(id) }));
 
       const farmMidBlue = parseFloat(await prompt(`Farm de mid ${mids.find(p => p.team === 'blue')?.name || 'Desconocido'} (blue): `));
       const farmMidRed = parseFloat(await prompt(`Farm de mid ${mids.find(p => p.team === 'red')?.name || 'Desconocido'} (red): `));
       const farmBotBlue = parseFloat(await prompt(`Farm de bot ${bots.find(p => p.team === 'blue')?.name || 'Desconocido'} (blue): `));
       const farmBotRed = parseFloat(await prompt(`Farm de bot ${bots.find(p => p.team === 'red')?.name || 'Desconocido'} (red): `));
 
-      const gameDurationInput = await prompt('Duración del game (mm:ss): ');
-      const [minutes, seconds] = gameDurationInput.split(':').map(Number);
-      const gameDurationMinutes = minutes + seconds / 60;
+      const [min, sec] = (await prompt('Duración del game (mm:ss): ')).split(':').map(Number);
+      const gameDurationMinutes = min + sec / 60;
 
       const supportVisionScores = {};
-      const supports = Object.entries(participantInfo)
-        .filter(([_, info]) => info.role === 'support')
-        .map(([id, info]) => ({ ...info, participantId: Number(id) }));
-
+      const supports = Object.entries(participantInfo).filter(([_, i]) => i.role === 'support').map(([id, i]) => ({ ...i, participantId: Number(id) }));
       for (const support of supports) {
-        const rawVisionScore = parseFloat(await prompt(`Vision score de ${support.name} (${support.team}): `));
-        const visionPerMinute = rawVisionScore / gameDurationMinutes;
-        supportVisionScores[support.participantId] = visionPerMinute;
+        const raw = parseFloat(await prompt(`Vision score de ${support.name} (${support.team}): `));
+        supportVisionScores[support.participantId] = raw / gameDurationMinutes;
       }
 
-      const winnerInput = await prompt(`¿Quién ganó? blue o red (b/r): `);
-      const winnerTeam = winnerInput.toLowerCase() === 'b' ? 'blue' : 'red';
+      const winnerTeam = (await prompt(`¿Quién ganó? blue o red (b/r): `)).toLowerCase() === 'b' ? 'blue' : 'red';
 
       const gameScores = {};
 
@@ -98,15 +89,11 @@ async function calcularPuntajes() {
         const info = participantInfo[p.participantId];
         if (!info) continue;
 
-        let score = 0;
         const { kills, deaths, assists, creepScore, killParticipation, championDamageShare, totalGoldEarned } = p;
         const kda = kills + assists;
+        let score = 0;
 
-        score += kills * 1.5;
-        score += assists * 1;
-        score -= deaths * 1;
-        score += creepScore * 0.01;
-
+        score += kills * 1.5 + assists * 1 - deaths * 1 + creepScore * 0.01;
         if (killParticipation >= 0.7) score += 2;
         if (kills >= 10) score += 3;
         if (championDamageShare >= 0.2) score += 3;
@@ -116,25 +103,18 @@ async function calcularPuntajes() {
 
         if (info.role === 'top') {
           if (championDamageShare >= 0.25) score += 2;
-
-          const enemyTop = tops.find(t => t.team !== info.team);
-          if (enemyTop) {
-            const enemyStats = players.find(pl => pl.participantId === enemyTop.participantId);
-            if (enemyStats && typeof totalGoldEarned === 'number' && typeof enemyStats.totalGoldEarned === 'number') {
-              const diff = totalGoldEarned - enemyStats.totalGoldEarned;
-              if (diff >= 2000) {
-                score += 2;
-              }
-            } else {
-              console.warn(chalk.yellow(`⚠️ No se pudo calcular diferencia de oro entre tops: ${info.name} vs ${enemyTop.name}`));
-            }
+          const enemy = tops.find(t => t.team !== info.team);
+          const enemyStats = players.find(pl => pl.participantId === enemy?.participantId);
+          if (enemyStats) {
+            const diff = totalGoldEarned - enemyStats.totalGoldEarned;
+            if (diff >= 2000) score += 2;
           }
         }
 
         if (info.role === 'jungle') {
           if (killParticipation >= 0.75) score += 2;
           if (objectives.dragons >= 4 && info.team === 'blue') score += 1.5;
-          if (objectives.barons?.[info.team]) score += objectives.barons[info.team] * 2;
+          score += (objectives.barons?.[info.team] || 0) * 2;
         }
 
         if (info.role === 'mid') {
@@ -146,11 +126,9 @@ async function calcularPuntajes() {
         if (info.role === 'bottom') {
           const farm = info.team === 'blue' ? farmBotBlue : farmBotRed;
           if (farm / gameDurationMinutes >= 10) score += 1.5;
-          const selfKills = kills;
-          const enemyBot = bots.find(b => b.team !== info.team);
-          const enemyStats = players.find(pl => pl.participantId === enemyBot.participantId);
-          const killDiff = selfKills - enemyStats.kills;
-          if (killDiff >= 5) score += 2;
+          const enemy = bots.find(b => b.team !== info.team);
+          const enemyStats = players.find(pl => pl.participantId === enemy?.participantId);
+          if (enemyStats && kills - enemyStats.kills >= 5) score += 2;
         }
 
         if (info.role === 'support') {
@@ -159,9 +137,10 @@ async function calcularPuntajes() {
           score += supportVisionScores[p.participantId] || 0;
         }
 
-        gameScores[info.name] = score;
-        puntajesFinales[info.name] = puntajesFinales[info.name] || [];
-        puntajesFinales[info.name].push(score);
+        const name = info.name;
+        gameScores[name] = score;
+        puntajesFinales[name] = puntajesFinales[name] || [];
+        puntajesFinales[name].push(score);
       }
 
       console.log(chalk.greenBright(`\n📊 Puntaje game ${playerStats.gameId}:`));
@@ -172,15 +151,72 @@ async function calcularPuntajes() {
   }
 
   console.log(chalk.yellowBright(`\n🏁 Puntaje final promedio:`));
+  const jugadoresPermitidosRef = db.collection("jugadorespermitidos").doc("todos");
+  const snapshot = await jugadoresPermitidosRef.get();
+  const dataActual = snapshot.exists ? snapshot.data() : {};
 
   for (const [name, scores] of Object.entries(puntajesFinales)) {
     const avg = scores.reduce((a, b) => a + b, 0) / scores.length;
     console.log(chalk.white(`${name}: `) + chalk.blueBright(avg.toFixed(2)));
-    await setPlayerAverageScore(name, avg, ronda);
+
+    await setPlayerAverageScore(name, avg, ronda); // guarda en jugadores
+
+    // Actualiza en jugadorespermitidos
+    if (dataActual[name]) {
+      if (!dataActual[name].puntajeronda) dataActual[name].puntajeronda = {};
+      dataActual[name].puntajeronda[rondaField] = avg;
+
+      // Calcular promedio torneo
+      const puntajes = Object.values(dataActual[name].puntajeronda).filter(p => p > 0);
+      const promedioTorneo = puntajes.length > 0 ? puntajes.reduce((a, b) => a + b, 0) / puntajes.length : 0;
+
+      dataActual[name].promediotorneo = parseFloat(promedioTorneo.toFixed(2));
+
+      const jugadoresRef = db.collection('jugadores');
+      const querySnapshot = await jugadoresRef.where('summonername', '==', name).get();
+      if (!querySnapshot.empty) {
+        const playerDoc = querySnapshot.docs[0];
+        await playerDoc.ref.set({
+          promediopuntos: dataActual[name].promediotorneo,
+        }, { merge: true });
+      }
+
+      // Evaluar para roster ideal
+      /*const rol = dataActual[name].rol?.toLowerCase();
+      const valor = dataActual[name].valor ?? Infinity;
+      if (
+        mejoresPorRol[rol] &&
+        (avg > mejoresPorRol[rol].puntaje || (avg === mejoresPorRol[rol].puntaje && valor < mejoresPorRol[rol].valor))
+      ) {
+        mejoresPorRol[rol] = {
+          puntaje: avg,
+          valor,
+          jugador: {
+            nombre: dataActual[name].nombre ?? "",
+            club: dataActual[name].club ?? "",
+            rol,
+            puntajeronda: avg,
+            foto: dataActual[name].foto ?? "",
+          },
+        };
+      }*/
+    }
   }
 
-  console.log(chalk.magentaBright('\n✨ Cálculo terminado. ¡Datos guardados correctamente!\n'));
+  // Guardamos los puntajes en jugadorespermitidos
+  await jugadoresPermitidosRef.set(dataActual);
+  console.log(chalk.greenBright("\n✅ Puntajes guardados en jugadorespermitidos."));
 
+  // Guardar roster ideal
+  const rosterIdeal = {};
+  Object.keys(mejoresPorRol).forEach((rol) => {
+    rosterIdeal[rol] = mejoresPorRol[rol].jugador;
+  });
+
+  await db.collection("rosterideal").doc(`ronda${ronda}`).set(rosterIdeal);
+  console.log(chalk.magentaBright(`\n🌟 Roster ideal de ronda ${ronda} guardado con éxito.`));
+
+  console.log(chalk.greenBright('\n✨ Cálculo terminado. ¡Todo guardado correctamente!\n'));
   process.exit();
 }
 

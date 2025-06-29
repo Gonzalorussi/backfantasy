@@ -20,7 +20,7 @@ console.log('Args:', args);
 console.log('numeroRonda:', numeroRonda);
 console.log('Ronda key:', `rankingronda${numeroRonda}`);
 
-if (isNaN(numeroRonda) || numeroRonda < 1 || numeroRonda > 9) {
+if (isNaN(numeroRonda) || numeroRonda < 1 || numeroRonda > 12) {
   console.error(chalk.red('⚠️  El número de ronda debe estar entre 1 y 9.'));
   process.exit(1);
 }
@@ -56,12 +56,14 @@ async function calcularPuntajeRonda() {
         const equipoDoc = equiposSnap.docs[0];
         const equipoData = equipoDoc.data();
 
+        const puntajeAnterior = equipoData.puntajesronda?.[rondaKey] || 0;
         const totalActual = equipoData.totalpuntos || 0;
+        const nuevoPuntaje = 0;
 
         await db.collection('equipos').doc(equipoDoc.id).update({
-          [`puntajesronda.${rondaKey}`]: 0,
-          totalpuntos: totalActual
-        });
+          [`puntajesronda.${rondaKey}`]: nuevoPuntaje,
+          totalpuntos: totalActual - puntajeAnterior + nuevoPuntaje
+          });
 
         console.log(chalk.cyan(`📊 Equipo ${equipoData.nombreequipo} actualizado con 0.`));
       }else{
@@ -113,11 +115,13 @@ async function calcularPuntajeRonda() {
       const equipoDoc = equiposSnap.docs[0];
       const equipoData = equipoDoc.data();
 
+      const puntajeAnterior = equipoData.puntajesronda?.[rondaKey] || 0;
       const totalActual = equipoData.totalpuntos || 0;
+      const nuevoPuntaje = puntajeTotalRonda;
 
       await db.collection('equipos').doc(equipoDoc.id).update({
-        [`puntajesronda.${rondaKey}`]: puntajeTotalRonda,
-        totalpuntos: totalActual + puntajeTotalRonda
+        [`puntajesronda.${rondaKey}`]: nuevoPuntaje,
+        totalpuntos: totalActual - puntajeAnterior + nuevoPuntaje
       });
 
       console.log(chalk.cyan(`📊 Equipo ${equipoData.nombreequipo} actualizado.`));
@@ -145,7 +149,7 @@ async function calcularPuntajeRonda() {
   console.log(chalk.red(`❌ ${jugadoresNoEncontrados} jugadores no fueron encontrados en la colección.`));
 }
 
-async function calcularTotales() {
+/*async function calcularTotales() {
   const rostersSnap = await db.collection('rosters').get();
 
   let rostersProcesados = 0;
@@ -168,7 +172,7 @@ async function calcularTotales() {
   }
 
   console.log(chalk.blue(`🎯 Totales acumulados actualizados para ${rostersProcesados} rosters.`));
-}
+}*/
 
 async function generarRankings() {
   // Obtener ranking equipos para la ronda
@@ -272,7 +276,7 @@ async function master() {
   console.log(chalk.magenta(`🚀 Iniciando cálculo de ronda ${numeroRonda}...`));
   const inicio = Date.now();
   await calcularPuntajeRonda();
-  await calcularTotales();
+  //await calcularTotales();
   await generarRankings();
   const fin = Date.now();
   const duracion = ((fin - inicio) / 1000).toFixed(2);

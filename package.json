@@ -10,7 +10,10 @@
     "processGameData": "node src/scripts/processGameData.js",
     "calcularPuntajes": "node src/scripts/calcularPuntajes",
     "puntajeRosters": "node src/scripts/puntajeRoster",
-    "rosterideal": "node src/scripts/rosterideal"
+    "rosterideal": "node src/scripts/rosterideal",
+    "promedios":"node src/scripts/top5promedios",
+    "seleccionados":"node src/scripts/topseleccionados",
+    "cargar":"node src/scripts/cargar"
   },
   "keywords": [],
   "author": "",

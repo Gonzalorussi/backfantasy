@@ -18,7 +18,7 @@ const cargarJugadoresEnDocumentoUnico = async () => {
       club: (jugador.club || '').toLowerCase(),
       foto: jugador.image || '',
       rol: jugador.role || '',
-      valor: 10,
+      valor: jugador.valor,
       totalpuntos: 0,
       promediopuntos: 0,
       esportsplayerid: jugador.esportsPlayerId || '',

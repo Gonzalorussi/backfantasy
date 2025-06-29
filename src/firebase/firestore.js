@@ -26,7 +26,7 @@ exports.setPlayerAverageScore = async (playerName, averageScore, ronda) => {
   console.log({ totalPuntosPrevio, averageScore });
 
 
-  const nuevoTotal = parseFloat((averageScore).toFixed(2));
+  const nuevoTotal = parseFloat((totalPuntosPrevio + averageScore).toFixed(2));
 
   await playerRef.set({
     totalpuntos: nuevoTotal,
