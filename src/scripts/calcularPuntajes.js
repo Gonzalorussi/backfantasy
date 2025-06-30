@@ -151,7 +151,7 @@ async function calcularPuntajes() {
   }
 
   console.log(chalk.yellowBright(`\n🏁 Puntaje final promedio:`));
-  const jugadoresPermitidosRef = db.collection("jugadorespermitidos").doc("todos");
+  const jugadoresPermitidosRef = db.collection("jugadorespermitidos").doc("agregado");
   const snapshot = await jugadoresPermitidosRef.get();
   const dataActual = snapshot.exists ? snapshot.data() : {};
 
@@ -165,53 +165,12 @@ async function calcularPuntajes() {
     if (dataActual[name]) {
       if (!dataActual[name].puntajeronda) dataActual[name].puntajeronda = {};
       dataActual[name].puntajeronda[rondaField] = avg;
-
-      // Calcular promedio torneo
-      const puntajes = Object.values(dataActual[name].puntajeronda).filter(p => p > 0);
-      const promedioTorneo = puntajes.length > 0 ? puntajes.reduce((a, b) => a + b, 0) / puntajes.length : 0;
-
-      dataActual[name].promediotorneo = parseFloat(promedioTorneo.toFixed(2));
-
-      const jugadoresRef = db.collection('jugadores');
-      const querySnapshot = await jugadoresRef.where('summonername', '==', name).get();
-      if (!querySnapshot.empty) {
-        const playerDoc = querySnapshot.docs[0];
-        await playerDoc.ref.set({
-          promediopuntos: dataActual[name].promediotorneo,
-        }, { merge: true });
-      }
-
-      // Evaluar para roster ideal
-      /*const rol = dataActual[name].rol?.toLowerCase();
-      const valor = dataActual[name].valor ?? Infinity;
-      if (
-        mejoresPorRol[rol] &&
-        (avg > mejoresPorRol[rol].puntaje || (avg === mejoresPorRol[rol].puntaje && valor < mejoresPorRol[rol].valor))
-      ) {
-        mejoresPorRol[rol] = {
-          puntaje: avg,
-          valor,
-          jugador: {
-            nombre: dataActual[name].nombre ?? "",
-            club: dataActual[name].club ?? "",
-            rol,
-            puntajeronda: avg,
-            foto: dataActual[name].foto ?? "",
-          },
-        };
-      }*/
     }
   }
 
   // Guardamos los puntajes en jugadorespermitidos
   await jugadoresPermitidosRef.set(dataActual);
   console.log(chalk.greenBright("\n✅ Puntajes guardados en jugadorespermitidos."));
-
-  // Guardar roster ideal
-  const rosterIdeal = {};
-  Object.keys(mejoresPorRol).forEach((rol) => {
-    rosterIdeal[rol] = mejoresPorRol[rol].jugador;
-  });
 
   await db.collection("rosterideal").doc(`ronda${ronda}`).set(rosterIdeal);
   console.log(chalk.magentaBright(`\n🌟 Roster ideal de ronda ${ronda} guardado con éxito.`));

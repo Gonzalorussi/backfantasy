@@ -28,11 +28,21 @@ exports.setPlayerAverageScore = async (playerName, averageScore, ronda) => {
 
   const nuevoTotal = parseFloat((totalPuntosPrevio + averageScore).toFixed(2));
 
+  const rondaKey = `ronda${ronda}`;
+  const puntajesRonda = {
+    ...(playerData.puntajeronda || {}),
+    [rondaKey]: parseFloat(averageScore.toFixed(2)),
+  };
+
+  const puntajes = Object.values(puntajesRonda).filter(p => typeof p === 'number' && p > 0);
+  const promedioTorneo = puntajes.length > 0
+    ? parseFloat((puntajes.reduce((a, b) => a + b, 0) / puntajes.length).toFixed(2))
+    : 0;
+
   await playerRef.set({
     totalpuntos: nuevoTotal,
-    puntajeronda: {
-      [`ronda${ronda}`]: parseFloat(averageScore.toFixed(2)),
-    },
+    puntajeronda: puntajesRonda,
+    promediopuntos: promedioTorneo
   }, { merge: true });
 };
 

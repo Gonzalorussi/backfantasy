@@ -1,0 +1,52 @@
+{
+  "serieId": "113470922764572294",
+  "league": "MSI",
+  "teams": [
+    "G2 Esports",
+    "GAM Esports"
+  ],
+  "startTime": "2025-06-30T00:00:00Z",
+  "state": "completed",
+  "games": [
+    {
+      "gameId": "113470922764572295",
+      "state": "completed",
+      "teams": {
+        "blue": "G2 Esports",
+        "red": "GAM Esports"
+      }
+    },
+    {
+      "gameId": "113470922764572296",
+      "state": "completed",
+      "teams": {
+        "blue": "GAM Esports",
+        "red": "G2 Esports"
+      }
+    },
+    {
+      "gameId": "113470922764572297",
+      "state": "completed",
+      "teams": {
+        "blue": "GAM Esports",
+        "red": "G2 Esports"
+      }
+    },
+    {
+      "gameId": "113470922764572298",
+      "state": "completed",
+      "teams": {
+        "blue": "G2 Esports",
+        "red": "GAM Esports"
+      }
+    },
+    {
+      "gameId": "113470922764572299",
+      "state": "completed",
+      "teams": {
+        "blue": "G2 Esports",
+        "red": "GAM Esports"
+      }
+    }
+  ]
+}

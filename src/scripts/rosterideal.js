@@ -24,9 +24,13 @@ async function main() {
 
     try {
       const rondaField = `ronda${rondaNum}`;
-      const jugadoresSnapshot = await db.collection("jugadorespermitidos").get();
+      const roles = ["top","jungle","mid","bottom", "support"];
+      const snapshot = await db.collection("jugadores").get();
 
-      const roles = ["bottom", "support", "mid", "jungle", "top"];
+      if (snapshot.empty) {
+      console.error("No hay jugadores en la colección.");
+      return rl.close();
+      }      
 
       // Guardamos mejor jugador con desempate por menor valor
       const mejoresPorRol = {};
@@ -34,35 +38,27 @@ async function main() {
         mejoresPorRol[rol] = { puntaje: -Infinity, valor: Infinity, jugador: null };
       });
 
-      jugadoresSnapshot.forEach((doc) => {
-        const data = doc.data();
-        const rol = (data.rol ?? "").toLowerCase();
+      snapshot.forEach((doc) => {
+        const jugador = doc.data();
+        const rol = jugador.rol?.toLowerCase();
+        const puntaje = jugador.puntajeronda?.[rondaField] ?? 0;
+        const valor = jugador.valor ?? Infinity;
 
-        if (roles.includes(rol)) {
-          const puntaje = data.puntajeronda?.[rondaField] ?? 0;
-          const valor = data.valor ?? Infinity;
+        if (!roles.includes(rol)) return;
 
-          const mejor = mejoresPorRol[rol];
-
-          // Condición de mejor jugador:
-          // 1) Puntaje mayor
-          // 2) En empate puntaje, menor valor
-          if (
-            puntaje > mejor.puntaje ||
-            (puntaje === mejor.puntaje && valor < mejor.valor)
-          ) {
-            mejoresPorRol[rol] = {
-              puntaje,
-              valor,
-              jugador: {
-                nombre: data.nombre ?? "",
-                club: data.club ?? "",
-                rol,
-                puntajeronda: puntaje,
-                foto: data.foto ?? "",
-              },
-            };
-          }
+        const mejor = mejoresPorRol[rol];
+        if (puntaje > mejor.puntaje || (puntaje === mejor.puntaje && valor < mejor.valor)) {
+          mejoresPorRol[rol] = {
+            puntaje,
+            valor,
+            jugador: {
+              nombre: jugador.nombre ?? doc.id,
+              club: jugador.club ?? "",
+              rol,
+              puntajeronda: puntaje,
+              foto: jugador.foto ?? "",
+            },
+          };
         }
       });
 
