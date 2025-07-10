@@ -1,0 +1,52 @@
+{
+  "serieId": "113470922758215229",
+  "league": "MSI",
+  "teams": [
+    "FlyQuest",
+    "G2 Esports"
+  ],
+  "startTime": "2025-07-04T19:00:00Z",
+  "state": "completed",
+  "games": [
+    {
+      "gameId": "113470922758215230",
+      "state": "completed",
+      "teams": {
+        "blue": "FlyQuest",
+        "red": "G2 Esports"
+      }
+    },
+    {
+      "gameId": "113470922758215231",
+      "state": "completed",
+      "teams": {
+        "blue": "G2 Esports",
+        "red": "FlyQuest"
+      }
+    },
+    {
+      "gameId": "113470922758215232",
+      "state": "completed",
+      "teams": {
+        "blue": "FlyQuest",
+        "red": "G2 Esports"
+      }
+    },
+    {
+      "gameId": "113470922758215233",
+      "state": "unneeded",
+      "teams": {
+        "blue": "G2 Esports",
+        "red": "FlyQuest"
+      }
+    },
+    {
+      "gameId": "113470922758215234",
+      "state": "unneeded",
+      "teams": {
+        "blue": "FlyQuest",
+        "red": "G2 Esports"
+      }
+    }
+  ]
+}

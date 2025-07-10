@@ -1,0 +1,555 @@
+[
+  {
+    "gameId": "113470922758215212",
+    "participants": {
+      "blue": [
+        {
+          "participantId": 1,
+          "esportsPlayerId": "110350224593953686",
+          "summonerName": "MKOI Myrwn",
+          "championId": "Galio",
+          "role": "top"
+        },
+        {
+          "participantId": 2,
+          "esportsPlayerId": "103877629120745120",
+          "summonerName": "MKOI Elyoya",
+          "championId": "Maokai",
+          "role": "jungle"
+        },
+        {
+          "participantId": 3,
+          "esportsPlayerId": "105504920899018806",
+          "summonerName": "MKOI Jojopyun",
+          "championId": "Yone",
+          "role": "mid"
+        },
+        {
+          "participantId": 4,
+          "esportsPlayerId": "103536968833612789",
+          "summonerName": "MKOI Supa",
+          "championId": "Varus",
+          "role": "bottom"
+        },
+        {
+          "participantId": 5,
+          "esportsPlayerId": "107564404490889053",
+          "summonerName": "MKOI Alvaro",
+          "championId": "Alistar",
+          "role": "support"
+        }
+      ],
+      "red": [
+        {
+          "participantId": 6,
+          "esportsPlayerId": "103478281356330346",
+          "summonerName": "BLG Bin",
+          "championId": "Rumble",
+          "role": "top"
+        },
+        {
+          "participantId": 7,
+          "esportsPlayerId": "107597339246973242",
+          "summonerName": "BLG Beichuan",
+          "championId": "Pantheon",
+          "role": "jungle"
+        },
+        {
+          "participantId": 8,
+          "esportsPlayerId": "99566404803543690",
+          "summonerName": "BLG Knight",
+          "championId": "Aurora",
+          "role": "mid"
+        },
+        {
+          "participantId": 9,
+          "esportsPlayerId": "106368692529261498",
+          "summonerName": "BLG Elk",
+          "championId": "MissFortune",
+          "role": "bottom"
+        },
+        {
+          "participantId": 10,
+          "esportsPlayerId": "110547957837987327",
+          "summonerName": "BLG ON",
+          "championId": "Rakan",
+          "role": "support"
+        }
+      ]
+    },
+    "finalStats": {
+      "timestamp": "2025-07-03T19:46:06.643Z",
+      "blue": {
+        "totalGold": 59689,
+        "barons": 0,
+        "dragons": [
+          "infernal"
+        ]
+      },
+      "red": {
+        "totalGold": 75670,
+        "barons": 1,
+        "dragons": [
+          "ocean",
+          "hextech",
+          "infernal",
+          "infernal"
+        ]
+      }
+    },
+    "objetivos": [
+      {
+        "timestamp": "2025-07-03T19:46:01.032Z",
+        "type": "DRAGON",
+        "subtype": "infernal",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-03T19:46:01.032Z",
+        "type": "DRAGON",
+        "subtype": "ocean",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-03T19:46:01.032Z",
+        "type": "DRAGON",
+        "subtype": "hextech",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-03T19:46:01.032Z",
+        "type": "DRAGON",
+        "subtype": "infernal",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-03T19:46:01.032Z",
+        "type": "DRAGON",
+        "subtype": "infernal",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-03T19:46:01.032Z",
+        "type": "BARON",
+        "team": "red"
+      }
+    ]
+  },
+  {
+    "gameId": "113470922758215213",
+    "participants": {
+      "blue": [
+        {
+          "participantId": 1,
+          "esportsPlayerId": "110350224593953686",
+          "summonerName": "MKOI Myrwn",
+          "championId": "Akali",
+          "role": "top"
+        },
+        {
+          "participantId": 2,
+          "esportsPlayerId": "103877629120745120",
+          "summonerName": "MKOI Elyoya",
+          "championId": "MonkeyKing",
+          "role": "jungle"
+        },
+        {
+          "participantId": 3,
+          "esportsPlayerId": "105504920899018806",
+          "summonerName": "MKOI Jojopyun",
+          "championId": "Azir",
+          "role": "mid"
+        },
+        {
+          "participantId": 4,
+          "esportsPlayerId": "103536968833612789",
+          "summonerName": "MKOI Supa",
+          "championId": "Kaisa",
+          "role": "bottom"
+        },
+        {
+          "participantId": 5,
+          "esportsPlayerId": "107564404490889053",
+          "summonerName": "MKOI Alvaro",
+          "championId": "Rell",
+          "role": "support"
+        }
+      ],
+      "red": [
+        {
+          "participantId": 6,
+          "esportsPlayerId": "103478281356330346",
+          "summonerName": "BLG Bin",
+          "championId": "Gwen",
+          "role": "top"
+        },
+        {
+          "participantId": 7,
+          "esportsPlayerId": "107597339246973242",
+          "summonerName": "BLG Beichuan",
+          "championId": "XinZhao",
+          "role": "jungle"
+        },
+        {
+          "participantId": 8,
+          "esportsPlayerId": "99566404803543690",
+          "summonerName": "BLG Knight",
+          "championId": "Viktor",
+          "role": "mid"
+        },
+        {
+          "participantId": 9,
+          "esportsPlayerId": "106368692529261498",
+          "summonerName": "BLG Elk",
+          "championId": "Corki",
+          "role": "bottom"
+        },
+        {
+          "participantId": 10,
+          "esportsPlayerId": "110547957837987327",
+          "summonerName": "BLG ON",
+          "championId": "Leona",
+          "role": "support"
+        }
+      ]
+    },
+    "finalStats": {
+      "timestamp": "2025-07-03T20:37:19.411Z",
+      "blue": {
+        "totalGold": 63537,
+        "barons": 1,
+        "dragons": [
+          "cloud",
+          "cloud"
+        ]
+      },
+      "red": {
+        "totalGold": 51662,
+        "barons": 0,
+        "dragons": [
+          "ocean",
+          "mountain"
+        ]
+      }
+    },
+    "objetivos": [
+      {
+        "timestamp": "2025-07-03T20:37:15.664Z",
+        "type": "DRAGON",
+        "subtype": "cloud",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-03T20:37:15.664Z",
+        "type": "DRAGON",
+        "subtype": "cloud",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-03T20:37:15.664Z",
+        "type": "DRAGON",
+        "subtype": "ocean",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-03T20:37:15.664Z",
+        "type": "DRAGON",
+        "subtype": "mountain",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-03T20:37:15.664Z",
+        "type": "BARON",
+        "team": "blue"
+      }
+    ]
+  },
+  {
+    "gameId": "113470922758215214",
+    "participants": {
+      "blue": [
+        {
+          "participantId": 1,
+          "esportsPlayerId": "103478281356330346",
+          "summonerName": "BLG Bin",
+          "championId": "Sion",
+          "role": "top"
+        },
+        {
+          "participantId": 2,
+          "esportsPlayerId": "107597339246973242",
+          "summonerName": "BLG Beichuan",
+          "championId": "Vi",
+          "role": "jungle"
+        },
+        {
+          "participantId": 3,
+          "esportsPlayerId": "99566404803543690",
+          "summonerName": "BLG Knight",
+          "championId": "Sylas",
+          "role": "mid"
+        },
+        {
+          "participantId": 4,
+          "esportsPlayerId": "106368692529261498",
+          "summonerName": "BLG Elk",
+          "championId": "Caitlyn",
+          "role": "bottom"
+        },
+        {
+          "participantId": 5,
+          "esportsPlayerId": "110547957837987327",
+          "summonerName": "BLG ON",
+          "championId": "Elise",
+          "role": "support"
+        }
+      ],
+      "red": [
+        {
+          "participantId": 6,
+          "esportsPlayerId": "110350224593953686",
+          "summonerName": "MKOI Myrwn",
+          "championId": "Aatrox",
+          "role": "top"
+        },
+        {
+          "participantId": 7,
+          "esportsPlayerId": "103877629120745120",
+          "summonerName": "MKOI Elyoya",
+          "championId": "Naafiri",
+          "role": "jungle"
+        },
+        {
+          "participantId": 8,
+          "esportsPlayerId": "105504920899018806",
+          "summonerName": "MKOI Jojopyun",
+          "championId": "Ahri",
+          "role": "mid"
+        },
+        {
+          "participantId": 9,
+          "esportsPlayerId": "103536968833612789",
+          "summonerName": "MKOI Supa",
+          "championId": "Ezreal",
+          "role": "bottom"
+        },
+        {
+          "participantId": 10,
+          "esportsPlayerId": "107564404490889053",
+          "summonerName": "MKOI Alvaro",
+          "championId": "Nautilus",
+          "role": "support"
+        }
+      ]
+    },
+    "finalStats": {
+      "timestamp": "2025-07-03T21:34:39.279Z",
+      "blue": {
+        "totalGold": 75428,
+        "barons": 1,
+        "dragons": [
+          "hextech",
+          "chemtech",
+          "infernal",
+          "infernal",
+          "elder"
+        ]
+      },
+      "red": {
+        "totalGold": 64545,
+        "barons": 1,
+        "dragons": []
+      }
+    },
+    "objetivos": [
+      {
+        "timestamp": "2025-07-03T21:34:34.932Z",
+        "type": "DRAGON",
+        "subtype": "hextech",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-03T21:34:34.932Z",
+        "type": "DRAGON",
+        "subtype": "chemtech",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-03T21:34:34.932Z",
+        "type": "DRAGON",
+        "subtype": "infernal",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-03T21:34:34.932Z",
+        "type": "DRAGON",
+        "subtype": "infernal",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-03T21:34:34.932Z",
+        "type": "DRAGON",
+        "subtype": "elder",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-03T21:34:34.932Z",
+        "type": "BARON",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-03T21:34:34.932Z",
+        "type": "BARON",
+        "team": "red"
+      }
+    ]
+  },
+  {
+    "gameId": "113470922758215215",
+    "participants": {
+      "blue": [
+        {
+          "participantId": 1,
+          "esportsPlayerId": "110350224593953686",
+          "summonerName": "MKOI Myrwn",
+          "championId": "Ambessa",
+          "role": "top"
+        },
+        {
+          "participantId": 2,
+          "esportsPlayerId": "103877629120745120",
+          "summonerName": "MKOI Elyoya",
+          "championId": "Sejuani",
+          "role": "jungle"
+        },
+        {
+          "participantId": 3,
+          "esportsPlayerId": "105504920899018806",
+          "summonerName": "MKOI Jojopyun",
+          "championId": "Ryze",
+          "role": "mid"
+        },
+        {
+          "participantId": 4,
+          "esportsPlayerId": "103536968833612789",
+          "summonerName": "MKOI Supa",
+          "championId": "Kalista",
+          "role": "bottom"
+        },
+        {
+          "participantId": 5,
+          "esportsPlayerId": "107564404490889053",
+          "summonerName": "MKOI Alvaro",
+          "championId": "Renata",
+          "role": "support"
+        }
+      ],
+      "red": [
+        {
+          "participantId": 6,
+          "esportsPlayerId": "103478281356330346",
+          "summonerName": "BLG Bin",
+          "championId": "KSante",
+          "role": "top"
+        },
+        {
+          "participantId": 7,
+          "esportsPlayerId": "107597339246973242",
+          "summonerName": "BLG Beichuan",
+          "championId": "Skarner",
+          "role": "jungle"
+        },
+        {
+          "participantId": 8,
+          "esportsPlayerId": "99566404803543690",
+          "summonerName": "BLG Knight",
+          "championId": "Syndra",
+          "role": "mid"
+        },
+        {
+          "participantId": 9,
+          "esportsPlayerId": "106368692529261498",
+          "summonerName": "BLG Elk",
+          "championId": "Ashe",
+          "role": "bottom"
+        },
+        {
+          "participantId": 10,
+          "esportsPlayerId": "110547957837987327",
+          "summonerName": "BLG ON",
+          "championId": "Neeko",
+          "role": "support"
+        }
+      ]
+    },
+    "finalStats": {
+      "timestamp": "2025-07-03T22:34:49.899Z",
+      "blue": {
+        "totalGold": 72810,
+        "barons": 1,
+        "dragons": [
+          "ocean",
+          "mountain",
+          "mountain",
+          "mountain"
+        ]
+      },
+      "red": {
+        "totalGold": 72818,
+        "barons": 1,
+        "dragons": [
+          "hextech",
+          "mountain"
+        ]
+      }
+    },
+    "objetivos": [
+      {
+        "timestamp": "2025-07-03T22:34:45.753Z",
+        "type": "DRAGON",
+        "subtype": "ocean",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-03T22:34:45.753Z",
+        "type": "DRAGON",
+        "subtype": "mountain",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-03T22:34:45.753Z",
+        "type": "DRAGON",
+        "subtype": "mountain",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-03T22:34:45.753Z",
+        "type": "DRAGON",
+        "subtype": "mountain",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-03T22:34:45.753Z",
+        "type": "DRAGON",
+        "subtype": "hextech",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-03T22:34:45.753Z",
+        "type": "DRAGON",
+        "subtype": "mountain",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-03T22:34:45.753Z",
+        "type": "BARON",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-03T22:34:45.753Z",
+        "type": "BARON",
+        "team": "red"
+      }
+    ]
+  }
+]

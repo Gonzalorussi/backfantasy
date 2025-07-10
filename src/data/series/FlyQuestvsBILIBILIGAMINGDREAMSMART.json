@@ -1,0 +1,52 @@
+{
+  "serieId": "113470922758215247",
+  "league": "MSI",
+  "teams": [
+    "FlyQuest",
+    "BILIBILI GAMING DREAMSMART"
+  ],
+  "startTime": "2025-07-09T00:00:00Z",
+  "state": "completed",
+  "games": [
+    {
+      "gameId": "113470922758215248",
+      "state": "completed",
+      "teams": {
+        "blue": "FlyQuest",
+        "red": "BILIBILI GAMING DREAMSMART"
+      }
+    },
+    {
+      "gameId": "113470922758215249",
+      "state": "completed",
+      "teams": {
+        "blue": "BILIBILI GAMING DREAMSMART",
+        "red": "FlyQuest"
+      }
+    },
+    {
+      "gameId": "113470922758215250",
+      "state": "completed",
+      "teams": {
+        "blue": "BILIBILI GAMING DREAMSMART",
+        "red": "FlyQuest"
+      }
+    },
+    {
+      "gameId": "113470922758215251",
+      "state": "completed",
+      "teams": {
+        "blue": "BILIBILI GAMING DREAMSMART",
+        "red": "FlyQuest"
+      }
+    },
+    {
+      "gameId": "113470922758215252",
+      "state": "completed",
+      "teams": {
+        "blue": "BILIBILI GAMING DREAMSMART",
+        "red": "FlyQuest"
+      }
+    }
+  ]
+}

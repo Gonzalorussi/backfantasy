@@ -1,0 +1,415 @@
+[
+  {
+    "gameId": "113470922758215230",
+    "participants": {
+      "blue": [
+        {
+          "participantId": 1,
+          "esportsPlayerId": "99322214662601038",
+          "summonerName": "FLY Bwipo",
+          "championId": "Sion",
+          "role": "top"
+        },
+        {
+          "participantId": 2,
+          "esportsPlayerId": "101389713966873995",
+          "summonerName": "FLY Inspired",
+          "championId": "Pantheon",
+          "role": "jungle"
+        },
+        {
+          "participantId": 3,
+          "esportsPlayerId": "110219103969081067",
+          "summonerName": "FLY Quad",
+          "championId": "Ryze",
+          "role": "mid"
+        },
+        {
+          "participantId": 4,
+          "esportsPlayerId": "108369186353082038",
+          "summonerName": "FLY Massu",
+          "championId": "Varus",
+          "role": "bottom"
+        },
+        {
+          "participantId": 5,
+          "esportsPlayerId": "106625308523122120",
+          "summonerName": "FLY Busio",
+          "championId": "Karma",
+          "role": "support"
+        }
+      ],
+      "red": [
+        {
+          "participantId": 6,
+          "esportsPlayerId": "99566406047571736",
+          "summonerName": "G2 BrokenBlade",
+          "championId": "Aatrox",
+          "role": "top"
+        },
+        {
+          "participantId": 7,
+          "esportsPlayerId": "107128052280762804",
+          "summonerName": "G2 SkewMond",
+          "championId": "Maokai",
+          "role": "jungle"
+        },
+        {
+          "participantId": 8,
+          "esportsPlayerId": "98767975968177297",
+          "summonerName": "G2 Caps",
+          "championId": "Cassiopeia",
+          "role": "mid"
+        },
+        {
+          "participantId": 9,
+          "esportsPlayerId": "98767975961872793",
+          "summonerName": "G2 Hans Sama",
+          "championId": "Jhin",
+          "role": "bottom"
+        },
+        {
+          "participantId": 10,
+          "esportsPlayerId": "102787200059605684",
+          "summonerName": "G2 Labrov",
+          "championId": "Alistar",
+          "role": "support"
+        }
+      ]
+    },
+    "finalStats": {
+      "timestamp": "2025-07-04T19:48:03.951Z",
+      "blue": {
+        "totalGold": 71134,
+        "barons": 1,
+        "dragons": [
+          "hextech",
+          "hextech",
+          "hextech"
+        ]
+      },
+      "red": {
+        "totalGold": 63654,
+        "barons": 1,
+        "dragons": [
+          "mountain",
+          "cloud",
+          "hextech"
+        ]
+      }
+    },
+    "objetivos": [
+      {
+        "timestamp": "2025-07-04T19:48:00.134Z",
+        "type": "DRAGON",
+        "subtype": "hextech",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-04T19:48:00.134Z",
+        "type": "DRAGON",
+        "subtype": "hextech",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-04T19:48:00.134Z",
+        "type": "DRAGON",
+        "subtype": "hextech",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-04T19:48:00.134Z",
+        "type": "DRAGON",
+        "subtype": "mountain",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-04T19:48:00.134Z",
+        "type": "DRAGON",
+        "subtype": "cloud",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-04T19:48:00.134Z",
+        "type": "DRAGON",
+        "subtype": "hextech",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-04T19:48:00.134Z",
+        "type": "BARON",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-04T19:48:00.134Z",
+        "type": "BARON",
+        "team": "red"
+      }
+    ]
+  },
+  {
+    "gameId": "113470922758215231",
+    "participants": {
+      "blue": [
+        {
+          "participantId": 1,
+          "esportsPlayerId": "99566406047571736",
+          "summonerName": "G2 BrokenBlade",
+          "championId": "KSante",
+          "role": "top"
+        },
+        {
+          "participantId": 2,
+          "esportsPlayerId": "107128052280762804",
+          "summonerName": "G2 SkewMond",
+          "championId": "Vi",
+          "role": "jungle"
+        },
+        {
+          "participantId": 3,
+          "esportsPlayerId": "98767975968177297",
+          "summonerName": "G2 Caps",
+          "championId": "Aurora",
+          "role": "mid"
+        },
+        {
+          "participantId": 4,
+          "esportsPlayerId": "98767975961872793",
+          "summonerName": "G2 Hans Sama",
+          "championId": "Corki",
+          "role": "bottom"
+        },
+        {
+          "participantId": 5,
+          "esportsPlayerId": "102787200059605684",
+          "summonerName": "G2 Labrov",
+          "championId": "Rell",
+          "role": "support"
+        }
+      ],
+      "red": [
+        {
+          "participantId": 6,
+          "esportsPlayerId": "99322214662601038",
+          "summonerName": "FLY Bwipo",
+          "championId": "Garen",
+          "role": "top"
+        },
+        {
+          "participantId": 7,
+          "esportsPlayerId": "101389713966873995",
+          "summonerName": "FLY Inspired",
+          "championId": "MonkeyKing",
+          "role": "jungle"
+        },
+        {
+          "participantId": 8,
+          "esportsPlayerId": "110219103969081067",
+          "summonerName": "FLY Quad",
+          "championId": "Annie",
+          "role": "mid"
+        },
+        {
+          "participantId": 9,
+          "esportsPlayerId": "108369186353082038",
+          "summonerName": "FLY Massu",
+          "championId": "Senna",
+          "role": "bottom"
+        },
+        {
+          "participantId": 10,
+          "esportsPlayerId": "106625308523122120",
+          "summonerName": "FLY Busio",
+          "championId": "Bard",
+          "role": "support"
+        }
+      ]
+    },
+    "finalStats": {
+      "timestamp": "2025-07-04T20:49:04.034Z",
+      "blue": {
+        "totalGold": 65192,
+        "barons": 0,
+        "dragons": [
+          "cloud"
+        ]
+      },
+      "red": {
+        "totalGold": 77376,
+        "barons": 2,
+        "dragons": [
+          "ocean",
+          "chemtech",
+          "cloud",
+          "cloud",
+          "elder"
+        ]
+      }
+    },
+    "objetivos": [
+      {
+        "timestamp": "2025-07-04T20:48:59.687Z",
+        "type": "DRAGON",
+        "subtype": "cloud",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-04T20:48:59.687Z",
+        "type": "DRAGON",
+        "subtype": "ocean",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-04T20:48:59.687Z",
+        "type": "DRAGON",
+        "subtype": "chemtech",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-04T20:48:59.687Z",
+        "type": "DRAGON",
+        "subtype": "cloud",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-04T20:48:59.687Z",
+        "type": "DRAGON",
+        "subtype": "cloud",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-04T20:48:59.687Z",
+        "type": "DRAGON",
+        "subtype": "elder",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-04T20:48:59.687Z",
+        "type": "BARON",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-04T20:48:59.687Z",
+        "type": "BARON",
+        "team": "red"
+      }
+    ]
+  },
+  {
+    "gameId": "113470922758215232",
+    "participants": {
+      "blue": [
+        {
+          "participantId": 1,
+          "esportsPlayerId": "99322214662601038",
+          "summonerName": "FLY Bwipo",
+          "championId": "Yorick",
+          "role": "top"
+        },
+        {
+          "participantId": 2,
+          "esportsPlayerId": "101389713966873995",
+          "summonerName": "FLY Inspired",
+          "championId": "Trundle",
+          "role": "jungle"
+        },
+        {
+          "participantId": 3,
+          "esportsPlayerId": "110219103969081067",
+          "summonerName": "FLY Quad",
+          "championId": "Orianna",
+          "role": "mid"
+        },
+        {
+          "participantId": 4,
+          "esportsPlayerId": "108369186353082038",
+          "summonerName": "FLY Massu",
+          "championId": "Kaisa",
+          "role": "bottom"
+        },
+        {
+          "participantId": 5,
+          "esportsPlayerId": "106625308523122120",
+          "summonerName": "FLY Busio",
+          "championId": "Neeko",
+          "role": "support"
+        }
+      ],
+      "red": [
+        {
+          "participantId": 6,
+          "esportsPlayerId": "99566406047571736",
+          "summonerName": "G2 BrokenBlade",
+          "championId": "Chogath",
+          "role": "top"
+        },
+        {
+          "participantId": 7,
+          "esportsPlayerId": "107128052280762804",
+          "summonerName": "G2 SkewMond",
+          "championId": "Naafiri",
+          "role": "jungle"
+        },
+        {
+          "participantId": 8,
+          "esportsPlayerId": "98767975968177297",
+          "summonerName": "G2 Caps",
+          "championId": "Akali",
+          "role": "mid"
+        },
+        {
+          "participantId": 9,
+          "esportsPlayerId": "98767975961872793",
+          "summonerName": "G2 Hans Sama",
+          "championId": "Lucian",
+          "role": "bottom"
+        },
+        {
+          "participantId": 10,
+          "esportsPlayerId": "102787200059605684",
+          "summonerName": "G2 Labrov",
+          "championId": "Nautilus",
+          "role": "support"
+        }
+      ]
+    },
+    "finalStats": {
+      "timestamp": "2025-07-04T21:39:57.981Z",
+      "blue": {
+        "totalGold": 52617,
+        "barons": 0,
+        "dragons": [
+          "chemtech"
+        ]
+      },
+      "red": {
+        "totalGold": 47155,
+        "barons": 0,
+        "dragons": [
+          "ocean",
+          "hextech"
+        ]
+      }
+    },
+    "objetivos": [
+      {
+        "timestamp": "2025-07-04T21:39:53.767Z",
+        "type": "DRAGON",
+        "subtype": "chemtech",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-04T21:39:53.767Z",
+        "type": "DRAGON",
+        "subtype": "ocean",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-04T21:39:53.767Z",
+        "type": "DRAGON",
+        "subtype": "hextech",
+        "team": "red"
+      }
+    ]
+  }
+]

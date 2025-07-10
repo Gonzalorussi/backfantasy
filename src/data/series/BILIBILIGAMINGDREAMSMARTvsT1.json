@@ -1,0 +1,52 @@
+{
+  "serieId": "113470922758215223",
+  "league": "MSI",
+  "teams": [
+    "BILIBILI GAMING DREAMSMART",
+    "T1"
+  ],
+  "startTime": "2025-07-06T00:00:00Z",
+  "state": "completed",
+  "games": [
+    {
+      "gameId": "113470922758215224",
+      "state": "completed",
+      "teams": {
+        "blue": "BILIBILI GAMING DREAMSMART",
+        "red": "T1"
+      }
+    },
+    {
+      "gameId": "113470922758215225",
+      "state": "completed",
+      "teams": {
+        "blue": "BILIBILI GAMING DREAMSMART",
+        "red": "T1"
+      }
+    },
+    {
+      "gameId": "113470922758215226",
+      "state": "completed",
+      "teams": {
+        "blue": "BILIBILI GAMING DREAMSMART",
+        "red": "T1"
+      }
+    },
+    {
+      "gameId": "113470922758215227",
+      "state": "unneeded",
+      "teams": {
+        "blue": "T1",
+        "red": "BILIBILI GAMING DREAMSMART"
+      }
+    },
+    {
+      "gameId": "113470922758215228",
+      "state": "unneeded",
+      "teams": {
+        "blue": "BILIBILI GAMING DREAMSMART",
+        "red": "T1"
+      }
+    }
+  ]
+}

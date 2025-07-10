@@ -1,0 +1,52 @@
+{
+  "serieId": "113470922758215205",
+  "league": "MSI",
+  "teams": [
+    "CTBC Flying Oyster",
+    "T1"
+  ],
+  "startTime": "2025-07-04T00:00:00Z",
+  "state": "completed",
+  "games": [
+    {
+      "gameId": "113470922758215206",
+      "state": "completed",
+      "teams": {
+        "blue": "CTBC Flying Oyster",
+        "red": "T1"
+      }
+    },
+    {
+      "gameId": "113470922758215207",
+      "state": "completed",
+      "teams": {
+        "blue": "CTBC Flying Oyster",
+        "red": "T1"
+      }
+    },
+    {
+      "gameId": "113470922758215208",
+      "state": "completed",
+      "teams": {
+        "blue": "T1",
+        "red": "CTBC Flying Oyster"
+      }
+    },
+    {
+      "gameId": "113470922758215209",
+      "state": "completed",
+      "teams": {
+        "blue": "T1",
+        "red": "CTBC Flying Oyster"
+      }
+    },
+    {
+      "gameId": "113470922758215210",
+      "state": "completed",
+      "teams": {
+        "blue": "CTBC Flying Oyster",
+        "red": "T1"
+      }
+    }
+  ]
+}

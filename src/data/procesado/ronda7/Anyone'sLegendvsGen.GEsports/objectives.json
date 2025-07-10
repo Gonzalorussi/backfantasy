@@ -1,0 +1,633 @@
+[
+  {
+    "gameId": "113470922758215218",
+    "participants": {
+      "blue": [
+        {
+          "participantId": 1,
+          "esportsPlayerId": "99566404812254466",
+          "summonerName": "AL Flandre",
+          "championId": "Rumble",
+          "role": "top"
+        },
+        {
+          "participantId": 2,
+          "esportsPlayerId": "99871276342823057",
+          "summonerName": "AL Tarzan",
+          "championId": "Pantheon",
+          "role": "jungle"
+        },
+        {
+          "participantId": 3,
+          "esportsPlayerId": "104287400430814502",
+          "summonerName": "AL Shanks",
+          "championId": "Annie",
+          "role": "mid"
+        },
+        {
+          "participantId": 4,
+          "esportsPlayerId": "99566404819916503",
+          "summonerName": "AL Hope",
+          "championId": "Kaisa",
+          "role": "bottom"
+        },
+        {
+          "participantId": 5,
+          "esportsPlayerId": "105530584812980593",
+          "summonerName": "AL Kael",
+          "championId": "Rell",
+          "role": "support"
+        }
+      ],
+      "red": [
+        {
+          "participantId": 6,
+          "esportsPlayerId": "99566404532924465",
+          "summonerName": "GEN Kiin",
+          "championId": "Ornn",
+          "role": "top"
+        },
+        {
+          "participantId": 7,
+          "esportsPlayerId": "100725844994345151",
+          "summonerName": "GEN Canyon",
+          "championId": "XinZhao",
+          "role": "jungle"
+        },
+        {
+          "participantId": 8,
+          "esportsPlayerId": "99871276342168416",
+          "summonerName": "GEN Chovy",
+          "championId": "Aurora",
+          "role": "mid"
+        },
+        {
+          "participantId": 9,
+          "esportsPlayerId": "98767975906852059",
+          "summonerName": "GEN Ruler",
+          "championId": "Jhin",
+          "role": "bottom"
+        },
+        {
+          "participantId": 10,
+          "esportsPlayerId": "107454956790371682",
+          "summonerName": "GEN Duro",
+          "championId": "Alistar",
+          "role": "support"
+        }
+      ]
+    },
+    "finalStats": {
+      "timestamp": "2025-07-04T22:32:01.285Z",
+      "blue": {
+        "totalGold": 53950,
+        "barons": 0,
+        "dragons": [
+          "ocean",
+          "hextech"
+        ]
+      },
+      "red": {
+        "totalGold": 42631,
+        "barons": 0,
+        "dragons": [
+          "infernal"
+        ]
+      }
+    },
+    "objetivos": [
+      {
+        "timestamp": "2025-07-04T22:31:57.205Z",
+        "type": "DRAGON",
+        "subtype": "ocean",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-04T22:31:57.205Z",
+        "type": "DRAGON",
+        "subtype": "hextech",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-04T22:31:57.205Z",
+        "type": "DRAGON",
+        "subtype": "infernal",
+        "team": "red"
+      }
+    ]
+  },
+  {
+    "gameId": "113470922758215219",
+    "participants": {
+      "blue": [
+        {
+          "participantId": 1,
+          "esportsPlayerId": "99566404532924465",
+          "summonerName": "GEN Kiin",
+          "championId": "Gwen",
+          "role": "top"
+        },
+        {
+          "participantId": 2,
+          "esportsPlayerId": "100725844994345151",
+          "summonerName": "GEN Canyon",
+          "championId": "Nocturne",
+          "role": "jungle"
+        },
+        {
+          "participantId": 3,
+          "esportsPlayerId": "99871276342168416",
+          "summonerName": "GEN Chovy",
+          "championId": "Azir",
+          "role": "mid"
+        },
+        {
+          "participantId": 4,
+          "esportsPlayerId": "98767975906852059",
+          "summonerName": "GEN Ruler",
+          "championId": "Senna",
+          "role": "bottom"
+        },
+        {
+          "participantId": 5,
+          "esportsPlayerId": "107454956790371682",
+          "summonerName": "GEN Duro",
+          "championId": "Nautilus",
+          "role": "support"
+        }
+      ],
+      "red": [
+        {
+          "participantId": 6,
+          "esportsPlayerId": "99566404812254466",
+          "summonerName": "AL Flandre",
+          "championId": "Jax",
+          "role": "top"
+        },
+        {
+          "participantId": 7,
+          "esportsPlayerId": "99871276342823057",
+          "summonerName": "AL Tarzan",
+          "championId": "Poppy",
+          "role": "jungle"
+        },
+        {
+          "participantId": 8,
+          "esportsPlayerId": "104287400430814502",
+          "summonerName": "AL Shanks",
+          "championId": "TwistedFate",
+          "role": "mid"
+        },
+        {
+          "participantId": 9,
+          "esportsPlayerId": "99566404819916503",
+          "summonerName": "AL Hope",
+          "championId": "Ezreal",
+          "role": "bottom"
+        },
+        {
+          "participantId": 10,
+          "esportsPlayerId": "105530584812980593",
+          "summonerName": "AL Kael",
+          "championId": "Braum",
+          "role": "support"
+        }
+      ]
+    },
+    "finalStats": {
+      "timestamp": "2025-07-04T23:22:46.165Z",
+      "blue": {
+        "totalGold": 58610,
+        "barons": 0,
+        "dragons": [
+          "mountain",
+          "cloud",
+          "hextech",
+          "hextech"
+        ]
+      },
+      "red": {
+        "totalGold": 50266,
+        "barons": 1,
+        "dragons": []
+      }
+    },
+    "objetivos": [
+      {
+        "timestamp": "2025-07-04T23:22:42.351Z",
+        "type": "DRAGON",
+        "subtype": "mountain",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-04T23:22:42.351Z",
+        "type": "DRAGON",
+        "subtype": "cloud",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-04T23:22:42.351Z",
+        "type": "DRAGON",
+        "subtype": "hextech",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-04T23:22:42.351Z",
+        "type": "DRAGON",
+        "subtype": "hextech",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-04T23:22:42.351Z",
+        "type": "BARON",
+        "team": "red"
+      }
+    ]
+  },
+  {
+    "gameId": "113470922758215220",
+    "participants": {
+      "blue": [
+        {
+          "participantId": 1,
+          "esportsPlayerId": "99566404812254466",
+          "summonerName": "AL Flandre",
+          "championId": "Sion",
+          "role": "top"
+        },
+        {
+          "participantId": 2,
+          "esportsPlayerId": "99871276342823057",
+          "summonerName": "AL Tarzan",
+          "championId": "Trundle",
+          "role": "jungle"
+        },
+        {
+          "participantId": 3,
+          "esportsPlayerId": "104287400430814502",
+          "summonerName": "AL Shanks",
+          "championId": "Akali",
+          "role": "mid"
+        },
+        {
+          "participantId": 4,
+          "esportsPlayerId": "99566404819916503",
+          "summonerName": "AL Hope",
+          "championId": "Varus",
+          "role": "bottom"
+        },
+        {
+          "participantId": 5,
+          "esportsPlayerId": "105530584812980593",
+          "summonerName": "AL Kael",
+          "championId": "Bard",
+          "role": "support"
+        }
+      ],
+      "red": [
+        {
+          "participantId": 6,
+          "esportsPlayerId": "99566404532924465",
+          "summonerName": "GEN Kiin",
+          "championId": "Ambessa",
+          "role": "top"
+        },
+        {
+          "participantId": 7,
+          "esportsPlayerId": "100725844994345151",
+          "summonerName": "GEN Canyon",
+          "championId": "Vi",
+          "role": "jungle"
+        },
+        {
+          "participantId": 8,
+          "esportsPlayerId": "99871276342168416",
+          "summonerName": "GEN Chovy",
+          "championId": "Taliyah",
+          "role": "mid"
+        },
+        {
+          "participantId": 9,
+          "esportsPlayerId": "98767975906852059",
+          "summonerName": "GEN Ruler",
+          "championId": "Ziggs",
+          "role": "bottom"
+        },
+        {
+          "participantId": 10,
+          "esportsPlayerId": "107454956790371682",
+          "summonerName": "GEN Duro",
+          "championId": "Rakan",
+          "role": "support"
+        }
+      ]
+    },
+    "finalStats": {
+      "timestamp": "2025-07-05T00:18:15.941Z",
+      "blue": {
+        "totalGold": 58072,
+        "barons": 0,
+        "dragons": [
+          "mountain",
+          "chemtech"
+        ]
+      },
+      "red": {
+        "totalGold": 66735,
+        "barons": 1,
+        "dragons": [
+          "hextech",
+          "chemtech",
+          "chemtech"
+        ]
+      }
+    },
+    "objetivos": [
+      {
+        "timestamp": "2025-07-05T00:18:11.392Z",
+        "type": "DRAGON",
+        "subtype": "mountain",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-05T00:18:11.392Z",
+        "type": "DRAGON",
+        "subtype": "chemtech",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-05T00:18:11.392Z",
+        "type": "DRAGON",
+        "subtype": "hextech",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-05T00:18:11.392Z",
+        "type": "DRAGON",
+        "subtype": "chemtech",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-05T00:18:11.392Z",
+        "type": "DRAGON",
+        "subtype": "chemtech",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-05T00:18:11.392Z",
+        "type": "BARON",
+        "team": "red"
+      }
+    ]
+  },
+  {
+    "gameId": "113470922758215221",
+    "participants": {
+      "blue": [
+        {
+          "participantId": 1,
+          "esportsPlayerId": "99566404812254466",
+          "summonerName": "AL Flandre",
+          "championId": "Smolder",
+          "role": "top"
+        },
+        {
+          "participantId": 2,
+          "esportsPlayerId": "99871276342823057",
+          "summonerName": "AL Tarzan",
+          "championId": "JarvanIV",
+          "role": "jungle"
+        },
+        {
+          "participantId": 3,
+          "esportsPlayerId": "104287400430814502",
+          "summonerName": "AL Shanks",
+          "championId": "Galio",
+          "role": "mid"
+        },
+        {
+          "participantId": 4,
+          "esportsPlayerId": "99566404819916503",
+          "summonerName": "AL Hope",
+          "championId": "MissFortune",
+          "role": "bottom"
+        },
+        {
+          "participantId": 5,
+          "esportsPlayerId": "105530584812980593",
+          "summonerName": "AL Kael",
+          "championId": "Neeko",
+          "role": "support"
+        }
+      ],
+      "red": [
+        {
+          "participantId": 6,
+          "esportsPlayerId": "99566404532924465",
+          "summonerName": "GEN Kiin",
+          "championId": "KSante",
+          "role": "top"
+        },
+        {
+          "participantId": 7,
+          "esportsPlayerId": "100725844994345151",
+          "summonerName": "GEN Canyon",
+          "championId": "Naafiri",
+          "role": "jungle"
+        },
+        {
+          "participantId": 8,
+          "esportsPlayerId": "99871276342168416",
+          "summonerName": "GEN Chovy",
+          "championId": "Sylas",
+          "role": "mid"
+        },
+        {
+          "participantId": 9,
+          "esportsPlayerId": "98767975906852059",
+          "summonerName": "GEN Ruler",
+          "championId": "Caitlyn",
+          "role": "bottom"
+        },
+        {
+          "participantId": 10,
+          "esportsPlayerId": "107454956790371682",
+          "summonerName": "GEN Duro",
+          "championId": "Karma",
+          "role": "support"
+        }
+      ]
+    },
+    "finalStats": {
+      "timestamp": "2025-07-05T01:11:48.046Z",
+      "blue": {
+        "totalGold": 63006,
+        "barons": 1,
+        "dragons": [
+          "infernal",
+          "infernal"
+        ]
+      },
+      "red": {
+        "totalGold": 48615,
+        "barons": 0,
+        "dragons": [
+          "hextech",
+          "chemtech"
+        ]
+      }
+    },
+    "objetivos": [
+      {
+        "timestamp": "2025-07-05T01:11:43.798Z",
+        "type": "DRAGON",
+        "subtype": "infernal",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-05T01:11:43.798Z",
+        "type": "DRAGON",
+        "subtype": "infernal",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-05T01:11:43.798Z",
+        "type": "DRAGON",
+        "subtype": "hextech",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-05T01:11:43.798Z",
+        "type": "DRAGON",
+        "subtype": "chemtech",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-05T01:11:43.798Z",
+        "type": "BARON",
+        "team": "blue"
+      }
+    ]
+  },
+  {
+    "gameId": "113470922758215222",
+    "participants": {
+      "blue": [
+        {
+          "participantId": 1,
+          "esportsPlayerId": "99566404532924465",
+          "summonerName": "GEN Kiin",
+          "championId": "Camille",
+          "role": "top"
+        },
+        {
+          "participantId": 2,
+          "esportsPlayerId": "100725844994345151",
+          "summonerName": "GEN Canyon",
+          "championId": "Sejuani",
+          "role": "jungle"
+        },
+        {
+          "participantId": 3,
+          "esportsPlayerId": "99871276342168416",
+          "summonerName": "GEN Chovy",
+          "championId": "Ryze",
+          "role": "mid"
+        },
+        {
+          "participantId": 4,
+          "esportsPlayerId": "98767975906852059",
+          "summonerName": "GEN Ruler",
+          "championId": "Xayah",
+          "role": "bottom"
+        },
+        {
+          "participantId": 5,
+          "esportsPlayerId": "107454956790371682",
+          "summonerName": "GEN Duro",
+          "championId": "Blitzcrank",
+          "role": "support"
+        }
+      ],
+      "red": [
+        {
+          "participantId": 6,
+          "esportsPlayerId": "99566404812254466",
+          "summonerName": "AL Flandre",
+          "championId": "Gragas",
+          "role": "top"
+        },
+        {
+          "participantId": 7,
+          "esportsPlayerId": "99871276342823057",
+          "summonerName": "AL Tarzan",
+          "championId": "Skarner",
+          "role": "jungle"
+        },
+        {
+          "participantId": 8,
+          "esportsPlayerId": "104287400430814502",
+          "summonerName": "AL Shanks",
+          "championId": "Cassiopeia",
+          "role": "mid"
+        },
+        {
+          "participantId": 9,
+          "esportsPlayerId": "99566404819916503",
+          "summonerName": "AL Hope",
+          "championId": "Corki",
+          "role": "bottom"
+        },
+        {
+          "participantId": 10,
+          "esportsPlayerId": "105530584812980593",
+          "summonerName": "AL Kael",
+          "championId": "Shen",
+          "role": "support"
+        }
+      ]
+    },
+    "finalStats": {
+      "timestamp": "2025-07-05T02:01:30.844Z",
+      "blue": {
+        "totalGold": 57958,
+        "barons": 1,
+        "dragons": [
+          "infernal",
+          "hextech",
+          "ocean"
+        ]
+      },
+      "red": {
+        "totalGold": 46957,
+        "barons": 0,
+        "dragons": []
+      }
+    },
+    "objetivos": [
+      {
+        "timestamp": "2025-07-05T02:01:26.829Z",
+        "type": "DRAGON",
+        "subtype": "infernal",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-05T02:01:26.829Z",
+        "type": "DRAGON",
+        "subtype": "hextech",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-05T02:01:26.829Z",
+        "type": "DRAGON",
+        "subtype": "ocean",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-05T02:01:26.829Z",
+        "type": "BARON",
+        "team": "blue"
+      }
+    ]
+  }
+]

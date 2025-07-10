@@ -1,0 +1,660 @@
+[
+  {
+    "gameId": "113470922758215206",
+    "participants": {
+      "blue": [
+        {
+          "participantId": 1,
+          "esportsPlayerId": "104573247991198730",
+          "summonerName": "CFO Driver",
+          "championId": "Sion",
+          "role": "top"
+        },
+        {
+          "participantId": 2,
+          "esportsPlayerId": "101971954398227333",
+          "summonerName": "CFO JunJia",
+          "championId": "Pantheon",
+          "role": "jungle"
+        },
+        {
+          "participantId": 3,
+          "esportsPlayerId": "112772120821320830",
+          "summonerName": "CFO HongQ",
+          "championId": "Viktor",
+          "role": "mid"
+        },
+        {
+          "participantId": 4,
+          "esportsPlayerId": "104573129055417270",
+          "summonerName": "CFO Doggo",
+          "championId": "Ezreal",
+          "role": "bottom"
+        },
+        {
+          "participantId": 5,
+          "esportsPlayerId": "98767975956663486",
+          "summonerName": "CFO Kaiwing",
+          "championId": "Leona",
+          "role": "support"
+        }
+      ],
+      "red": [
+        {
+          "participantId": 6,
+          "esportsPlayerId": "102186485482484390",
+          "summonerName": "T1 Doran",
+          "championId": "Aatrox",
+          "role": "top"
+        },
+        {
+          "participantId": 7,
+          "esportsPlayerId": "105320682452092471",
+          "summonerName": "T1 Oner",
+          "championId": "XinZhao",
+          "role": "jungle"
+        },
+        {
+          "participantId": 8,
+          "esportsPlayerId": "98767991747728851",
+          "summonerName": "T1 Faker",
+          "championId": "Annie",
+          "role": "mid"
+        },
+        {
+          "participantId": 9,
+          "esportsPlayerId": "103495716775975785",
+          "summonerName": "T1 Gumayusi",
+          "championId": "Corki",
+          "role": "bottom"
+        },
+        {
+          "participantId": 10,
+          "esportsPlayerId": "103495716561790834",
+          "summonerName": "T1 Keria",
+          "championId": "Neeko",
+          "role": "support"
+        }
+      ]
+    },
+    "finalStats": {
+      "timestamp": "2025-07-03T23:39:02.124Z",
+      "blue": {
+        "totalGold": 64769,
+        "barons": 1,
+        "dragons": [
+          "infernal",
+          "hextech"
+        ]
+      },
+      "red": {
+        "totalGold": 77209,
+        "barons": 1,
+        "dragons": [
+          "chemtech",
+          "hextech",
+          "hextech"
+        ]
+      }
+    },
+    "objetivos": [
+      {
+        "timestamp": "2025-07-03T23:38:58.377Z",
+        "type": "DRAGON",
+        "subtype": "infernal",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-03T23:38:58.377Z",
+        "type": "DRAGON",
+        "subtype": "hextech",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-03T23:38:58.377Z",
+        "type": "DRAGON",
+        "subtype": "chemtech",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-03T23:38:58.377Z",
+        "type": "DRAGON",
+        "subtype": "hextech",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-03T23:38:58.377Z",
+        "type": "DRAGON",
+        "subtype": "hextech",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-03T23:38:58.377Z",
+        "type": "BARON",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-03T23:38:58.377Z",
+        "type": "BARON",
+        "team": "red"
+      }
+    ]
+  },
+  {
+    "gameId": "113470922758215207",
+    "participants": {
+      "blue": [
+        {
+          "participantId": 1,
+          "esportsPlayerId": "99566406483009320",
+          "summonerName": "CFO Rest",
+          "championId": "KSante",
+          "role": "top"
+        },
+        {
+          "participantId": 2,
+          "esportsPlayerId": "101971954398227333",
+          "summonerName": "CFO JunJia",
+          "championId": "Vi",
+          "role": "jungle"
+        },
+        {
+          "participantId": 3,
+          "esportsPlayerId": "112772120821320830",
+          "summonerName": "CFO HongQ",
+          "championId": "Aurora",
+          "role": "mid"
+        },
+        {
+          "participantId": 4,
+          "esportsPlayerId": "104573129055417270",
+          "summonerName": "CFO Doggo",
+          "championId": "Lucian",
+          "role": "bottom"
+        },
+        {
+          "participantId": 5,
+          "esportsPlayerId": "98767975956663486",
+          "summonerName": "CFO Kaiwing",
+          "championId": "Nami",
+          "role": "support"
+        }
+      ],
+      "red": [
+        {
+          "participantId": 6,
+          "esportsPlayerId": "102186485482484390",
+          "summonerName": "T1 Doran",
+          "championId": "Jax",
+          "role": "top"
+        },
+        {
+          "participantId": 7,
+          "esportsPlayerId": "105320682452092471",
+          "summonerName": "T1 Oner",
+          "championId": "MonkeyKing",
+          "role": "jungle"
+        },
+        {
+          "participantId": 8,
+          "esportsPlayerId": "98767991747728851",
+          "summonerName": "T1 Faker",
+          "championId": "Ryze",
+          "role": "mid"
+        },
+        {
+          "participantId": 9,
+          "esportsPlayerId": "103495716775975785",
+          "summonerName": "T1 Gumayusi",
+          "championId": "Kalista",
+          "role": "bottom"
+        },
+        {
+          "participantId": 10,
+          "esportsPlayerId": "103495716561790834",
+          "summonerName": "T1 Keria",
+          "championId": "Renata",
+          "role": "support"
+        }
+      ]
+    },
+    "finalStats": {
+      "timestamp": "2025-07-04T00:28:51.223Z",
+      "blue": {
+        "totalGold": 59445,
+        "barons": 1,
+        "dragons": [
+          "cloud",
+          "infernal"
+        ]
+      },
+      "red": {
+        "totalGold": 42813,
+        "barons": 0,
+        "dragons": [
+          "hextech",
+          "infernal"
+        ]
+      }
+    },
+    "objetivos": [
+      {
+        "timestamp": "2025-07-04T00:28:47.478Z",
+        "type": "DRAGON",
+        "subtype": "cloud",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-04T00:28:47.478Z",
+        "type": "DRAGON",
+        "subtype": "infernal",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-04T00:28:47.478Z",
+        "type": "DRAGON",
+        "subtype": "hextech",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-04T00:28:47.478Z",
+        "type": "DRAGON",
+        "subtype": "infernal",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-04T00:28:47.478Z",
+        "type": "BARON",
+        "team": "blue"
+      }
+    ]
+  },
+  {
+    "gameId": "113470922758215208",
+    "participants": {
+      "blue": [
+        {
+          "participantId": 1,
+          "esportsPlayerId": "102186485482484390",
+          "summonerName": "T1 Doran",
+          "championId": "Gwen",
+          "role": "top"
+        },
+        {
+          "participantId": 2,
+          "esportsPlayerId": "105320682452092471",
+          "summonerName": "T1 Oner",
+          "championId": "Zed",
+          "role": "jungle"
+        },
+        {
+          "participantId": 3,
+          "esportsPlayerId": "98767991747728851",
+          "summonerName": "T1 Faker",
+          "championId": "Galio",
+          "role": "mid"
+        },
+        {
+          "participantId": 4,
+          "esportsPlayerId": "103495716775975785",
+          "summonerName": "T1 Gumayusi",
+          "championId": "Senna",
+          "role": "bottom"
+        },
+        {
+          "participantId": 5,
+          "esportsPlayerId": "103495716561790834",
+          "summonerName": "T1 Keria",
+          "championId": "Thresh",
+          "role": "support"
+        }
+      ],
+      "red": [
+        {
+          "participantId": 6,
+          "esportsPlayerId": "104573247991198730",
+          "summonerName": "CFO Driver",
+          "championId": "Gragas",
+          "role": "top"
+        },
+        {
+          "participantId": 7,
+          "esportsPlayerId": "101971954398227333",
+          "summonerName": "CFO JunJia",
+          "championId": "Trundle",
+          "role": "jungle"
+        },
+        {
+          "participantId": 8,
+          "esportsPlayerId": "112772120821320830",
+          "summonerName": "CFO HongQ",
+          "championId": "Swain",
+          "role": "mid"
+        },
+        {
+          "participantId": 9,
+          "esportsPlayerId": "104573129055417270",
+          "summonerName": "CFO Doggo",
+          "championId": "Caitlyn",
+          "role": "bottom"
+        },
+        {
+          "participantId": 10,
+          "esportsPlayerId": "98767975956663486",
+          "summonerName": "CFO Kaiwing",
+          "championId": "Braum",
+          "role": "support"
+        }
+      ]
+    },
+    "finalStats": {
+      "timestamp": "2025-07-04T01:21:17.551Z",
+      "blue": {
+        "totalGold": 50931,
+        "barons": 0,
+        "dragons": []
+      },
+      "red": {
+        "totalGold": 58937,
+        "barons": 1,
+        "dragons": [
+          "mountain",
+          "cloud",
+          "chemtech",
+          "chemtech"
+        ]
+      }
+    },
+    "objetivos": [
+      {
+        "timestamp": "2025-07-04T01:21:13.806Z",
+        "type": "DRAGON",
+        "subtype": "mountain",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-04T01:21:13.806Z",
+        "type": "DRAGON",
+        "subtype": "cloud",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-04T01:21:13.806Z",
+        "type": "DRAGON",
+        "subtype": "chemtech",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-04T01:21:13.806Z",
+        "type": "DRAGON",
+        "subtype": "chemtech",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-04T01:21:13.806Z",
+        "type": "BARON",
+        "team": "red"
+      }
+    ]
+  },
+  {
+    "gameId": "113470922758215209",
+    "participants": {
+      "blue": [
+        {
+          "participantId": 1,
+          "esportsPlayerId": "102186485482484390",
+          "summonerName": "T1 Doran",
+          "championId": "Rumble",
+          "role": "top"
+        },
+        {
+          "participantId": 2,
+          "esportsPlayerId": "105320682452092471",
+          "summonerName": "T1 Oner",
+          "championId": "JarvanIV",
+          "role": "jungle"
+        },
+        {
+          "participantId": 3,
+          "esportsPlayerId": "98767991747728851",
+          "summonerName": "T1 Faker",
+          "championId": "Sylas",
+          "role": "mid"
+        },
+        {
+          "participantId": 4,
+          "esportsPlayerId": "103495716775975785",
+          "summonerName": "T1 Gumayusi",
+          "championId": "Varus",
+          "role": "bottom"
+        },
+        {
+          "participantId": 5,
+          "esportsPlayerId": "103495716561790834",
+          "summonerName": "T1 Keria",
+          "championId": "Poppy",
+          "role": "support"
+        }
+      ],
+      "red": [
+        {
+          "participantId": 6,
+          "esportsPlayerId": "99566406483009320",
+          "summonerName": "CFO Rest",
+          "championId": "Ambessa",
+          "role": "top"
+        },
+        {
+          "participantId": 7,
+          "esportsPlayerId": "101971954398227333",
+          "summonerName": "CFO JunJia",
+          "championId": "Skarner",
+          "role": "jungle"
+        },
+        {
+          "participantId": 8,
+          "esportsPlayerId": "112772120821320830",
+          "summonerName": "CFO HongQ",
+          "championId": "Cassiopeia",
+          "role": "mid"
+        },
+        {
+          "participantId": 9,
+          "esportsPlayerId": "104573129055417270",
+          "summonerName": "CFO Doggo",
+          "championId": "Jhin",
+          "role": "bottom"
+        },
+        {
+          "participantId": 10,
+          "esportsPlayerId": "98767975956663486",
+          "summonerName": "CFO Kaiwing",
+          "championId": "Nautilus",
+          "role": "support"
+        }
+      ]
+    },
+    "finalStats": {
+      "timestamp": "2025-07-04T02:21:51.441Z",
+      "blue": {
+        "totalGold": 76669,
+        "barons": 0,
+        "dragons": [
+          "hextech",
+          "chemtech",
+          "chemtech"
+        ]
+      },
+      "red": {
+        "totalGold": 68413,
+        "barons": 1,
+        "dragons": [
+          "infernal",
+          "chemtech",
+          "chemtech"
+        ]
+      }
+    },
+    "objetivos": [
+      {
+        "timestamp": "2025-07-04T02:21:47.461Z",
+        "type": "DRAGON",
+        "subtype": "hextech",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-04T02:21:47.461Z",
+        "type": "DRAGON",
+        "subtype": "chemtech",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-04T02:21:47.461Z",
+        "type": "DRAGON",
+        "subtype": "chemtech",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-04T02:21:47.461Z",
+        "type": "DRAGON",
+        "subtype": "infernal",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-04T02:21:47.461Z",
+        "type": "DRAGON",
+        "subtype": "chemtech",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-04T02:21:47.461Z",
+        "type": "DRAGON",
+        "subtype": "chemtech",
+        "team": "red"
+      },
+      {
+        "timestamp": "2025-07-04T02:21:47.461Z",
+        "type": "BARON",
+        "team": "red"
+      }
+    ]
+  },
+  {
+    "gameId": "113470922758215210",
+    "participants": {
+      "blue": [
+        {
+          "participantId": 1,
+          "esportsPlayerId": "99566406483009320",
+          "summonerName": "CFO Rest",
+          "championId": "Ornn",
+          "role": "top"
+        },
+        {
+          "participantId": 2,
+          "esportsPlayerId": "101971954398227333",
+          "summonerName": "CFO JunJia",
+          "championId": "Zyra",
+          "role": "jungle"
+        },
+        {
+          "participantId": 3,
+          "esportsPlayerId": "112772120821320830",
+          "summonerName": "CFO HongQ",
+          "championId": "Tristana",
+          "role": "mid"
+        },
+        {
+          "participantId": 4,
+          "esportsPlayerId": "104573129055417270",
+          "summonerName": "CFO Doggo",
+          "championId": "Xayah",
+          "role": "bottom"
+        },
+        {
+          "participantId": 5,
+          "esportsPlayerId": "98767975956663486",
+          "summonerName": "CFO Kaiwing",
+          "championId": "Rakan",
+          "role": "support"
+        }
+      ],
+      "red": [
+        {
+          "participantId": 6,
+          "esportsPlayerId": "102186485482484390",
+          "summonerName": "T1 Doran",
+          "championId": "Jayce",
+          "role": "top"
+        },
+        {
+          "participantId": 7,
+          "esportsPlayerId": "105320682452092471",
+          "summonerName": "T1 Oner",
+          "championId": "Sejuani",
+          "role": "jungle"
+        },
+        {
+          "participantId": 8,
+          "esportsPlayerId": "98767991747728851",
+          "summonerName": "T1 Faker",
+          "championId": "Orianna",
+          "role": "mid"
+        },
+        {
+          "participantId": 9,
+          "esportsPlayerId": "103495716775975785",
+          "summonerName": "T1 Gumayusi",
+          "championId": "Jinx",
+          "role": "bottom"
+        },
+        {
+          "participantId": 10,
+          "esportsPlayerId": "103495716561790834",
+          "summonerName": "T1 Keria",
+          "championId": "TahmKench",
+          "role": "support"
+        }
+      ]
+    },
+    "finalStats": {
+      "timestamp": "2025-07-04T03:08:11.112Z",
+      "blue": {
+        "totalGold": 40176,
+        "barons": 0,
+        "dragons": [
+          "cloud",
+          "ocean"
+        ]
+      },
+      "red": {
+        "totalGold": 53250,
+        "barons": 0,
+        "dragons": [
+          "mountain"
+        ]
+      }
+    },
+    "objetivos": [
+      {
+        "timestamp": "2025-07-04T03:08:07.199Z",
+        "type": "DRAGON",
+        "subtype": "cloud",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-04T03:08:07.199Z",
+        "type": "DRAGON",
+        "subtype": "ocean",
+        "team": "blue"
+      },
+      {
+        "timestamp": "2025-07-04T03:08:07.199Z",
+        "type": "DRAGON",
+        "subtype": "mountain",
+        "team": "red"
+      }
+    ]
+  }
+]

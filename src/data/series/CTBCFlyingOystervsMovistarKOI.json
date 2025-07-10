@@ -1,0 +1,52 @@
+{
+  "serieId": "113470922758215235",
+  "league": "MSI",
+  "teams": [
+    "CTBC Flying Oyster",
+    "Movistar KOI"
+  ],
+  "startTime": "2025-07-05T19:00:00Z",
+  "state": "completed",
+  "games": [
+    {
+      "gameId": "113470922758215236",
+      "state": "completed",
+      "teams": {
+        "blue": "CTBC Flying Oyster",
+        "red": "Movistar KOI"
+      }
+    },
+    {
+      "gameId": "113470922758215237",
+      "state": "completed",
+      "teams": {
+        "blue": "Movistar KOI",
+        "red": "CTBC Flying Oyster"
+      }
+    },
+    {
+      "gameId": "113470922758215238",
+      "state": "completed",
+      "teams": {
+        "blue": "Movistar KOI",
+        "red": "CTBC Flying Oyster"
+      }
+    },
+    {
+      "gameId": "113470922758215239",
+      "state": "completed",
+      "teams": {
+        "blue": "CTBC Flying Oyster",
+        "red": "Movistar KOI"
+      }
+    },
+    {
+      "gameId": "113470922758215240",
+      "state": "unneeded",
+      "teams": {
+        "blue": "Movistar KOI",
+        "red": "CTBC Flying Oyster"
+      }
+    }
+  ]
+}

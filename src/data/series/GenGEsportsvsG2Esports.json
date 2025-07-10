@@ -1,0 +1,52 @@
+{
+  "serieId": "113470922758018585",
+  "league": "MSI",
+  "teams": [
+    "Gen.G Esports",
+    "G2 Esports"
+  ],
+  "startTime": "2025-07-02T00:00:00Z",
+  "state": "completed",
+  "games": [
+    {
+      "gameId": "113470922758084122",
+      "state": "completed",
+      "teams": {
+        "blue": "Gen.G Esports",
+        "red": "G2 Esports"
+      }
+    },
+    {
+      "gameId": "113470922758215195",
+      "state": "completed",
+      "teams": {
+        "blue": "Gen.G Esports",
+        "red": "G2 Esports"
+      }
+    },
+    {
+      "gameId": "113470922758215196",
+      "state": "completed",
+      "teams": {
+        "blue": "G2 Esports",
+        "red": "Gen.G Esports"
+      }
+    },
+    {
+      "gameId": "113470922758215197",
+      "state": "completed",
+      "teams": {
+        "blue": "Gen.G Esports",
+        "red": "G2 Esports"
+      }
+    },
+    {
+      "gameId": "113470922758215198",
+      "state": "unneeded",
+      "teams": {
+        "blue": "G2 Esports",
+        "red": "Gen.G Esports"
+      }
+    }
+  ]
+}

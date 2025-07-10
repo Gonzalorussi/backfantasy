@@ -1,65 +1,5 @@
 [
     {
-			            "id": "98767975961872793",
-                    	"esportsPlayerId": "98767975961872793",
-                    	"summonerName": "G2 Hans Sama",
-                        "name": "Hans Sama",
-                        "firstName": "Steven",
-                        "lastName": "Liv",
-                        "image": "http://static.lolesports.com/players/1737734287725_hanssama.png",
-                        "role": "bottom",
-                        "club": "G2",
-                        "valor": 10
-                    },
-                    {
-                        "id": "99566406047571736",
-                    	"esportsPlayerId": "99566406047571736",
-                    	"summonerName": "G2 BrokenBlade",
-                        "name": "BrokenBlade",
-                        "firstName": "Sergen",
-                        "lastName": "Çelik",
-                        "image": "http://static.lolesports.com/players/1737734213179_brokenblade.png",
-                        "role": "top",
-                        "club":"G2",
-                        "valor": 10.5
-                    },
-                    {
-                        "id": "98767975968177297",
-                    	"esportsPlayerId": "98767975968177297",
-                    	"summonerName": "G2 Caps",
-                        "name": "Caps",
-                        "firstName": "Rasmus",
-                        "lastName": "Borregaard Winther",
-                        "image": "http://static.lolesports.com/players/1737734260603_caps.png",
-                        "role": "mid",
-                        "club": "G2",
-                        "valor": 10
-                    },
-                    {
-                        "id": "107128052280762804",
-                    	"esportsPlayerId": "107128052280762804",
-                    	"summonerName": "G2 SkewMond",
-                        "name": "SkewMond",
-                        "firstName": "Rudy",
-                        "lastName": "Semaan",
-                        "image": "http://static.lolesports.com/players/1737734234175_skewmond-Photoroom.png",
-                        "role": "jungle",
-                        "club": "G2",
-                        "valor": 8.5
-                    },
-                    {
-                        "id": "102787200059605684",
-                    	"esportsPlayerId": "102787200059605684",
-                   	    "summonerName": "G2 Labrov",
-                        "name": "Labrov",
-                        "firstName": "Labros",
-                        "lastName": "Papoutsakis",
-                        "image": "http://static.lolesports.com/players/1737734312663_labrov.png",
-                        "role": "support",
-                        "club": "G2",
-                        "valor": 9
-                    },
-                    {
                         "id": "99871276342168416",
                     	"esportsPlayerId": "99871276342168416",
                     	"summonerName": "GEN Chovy",
@@ -113,5 +53,60 @@
                         "image": "http://static.lolesports.com/players/1739366472306_image6-2025-02-12T141939.783.png",
                         "role": "support",
                         "valor": 10.5
+                    },
+                    {
+                        "id": "102186485482484390",
+                    	"esportsPlayerId": "102186485482484390",
+                    	"summonerName": "T1 Doran",
+                        "name": "Doran",
+                        "firstName": "Hyeonjun",
+                        "lastName": "Choi",
+                        "image": "http://static.lolesports.com/players/1739362891866_image6-2025-02-12T132101.302.png",
+                        "role": "top",
+                        "valor": 12
+                    },
+                    {
+                        "id": "98767991747728851",
+                    	"esportsPlayerId": "98767991747728851",
+                    	"summonerName": "T1 Faker",
+                        "name": "Faker",
+                        "firstName": "Sanghyeok",
+                        "lastName": "Lee",
+                        "image": "http://static.lolesports.com/players/1739362804068_image6-2025-02-12T131922.060.png",
+                        "role": "mid",
+                        "valor": 14
+                    },
+                    {
+                        "id": "103495716775975785",
+                    	"esportsPlayerId": "103495716775975785",
+                    	"summonerName": "T1 Gumayusi",
+                        "name": "Gumayusi",
+                        "firstName": "Minhyung",
+                        "lastName": "Lee",
+                        "image": "http://static.lolesports.com/players/1739362710416_image6-2025-02-12T131756.204.png",
+                        "role": "bottom",
+                        "valor": 12.5
+                    },
+                    {
+                        "id": "103495716561790834",
+                    	"esportsPlayerId": "103495716561790834",
+                    	"summonerName": "T1 Keria",
+                        "name": "Keria",
+                        "firstName": "Minseok",
+                        "lastName": "Ryu",
+                        "image": "http://static.lolesports.com/players/1739362613410_image6-2025-02-12T131347.293.png",
+                        "role": "support",
+                        "valor": 13.5
+                    },
+                    {
+                        "id": "105320682452092471",
+                    	"esportsPlayerId": "105320682452092471",
+                    	"summonerName": "T1 Oner",
+                        "name": "Oner",
+                        "firstName": "HYUNJUN",
+                        "lastName": "MUN",
+                        "image": "http://static.lolesports.com/players/1739362366214_image6-2025-02-12T131208.507.png",
+                        "role": "jungle",
+			"valor": 13
                     }
 ]

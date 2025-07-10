@@ -8,13 +8,15 @@ firebase-admin
 chalk@4
 
 FLUJO DE EJECUCION DE SCRIPTS
-1- EJECUTAR TESTSERIESFETCHER QUE BUSCA LOS GAME ID DE UNA SERIE Y CREA UN JSON EN DATA/SERIES COMO "NOMBREQUIPOVSNOMBREEQUIPO"
-2- EJECUTAR PROCESSGAMEDATA PASANDOLE EL JSON DESEADO DE DATA/SERIES QUE CREA 2 ARCHIVOS EN DATA/GAMEDATA/NOMBREQUIPOVSNOMBREEQUIPO:
-    OBJECTIVES: GUARDA ESTADISTICAS POR EQUIPO
-    PLAYERSTATS: GUARDA ESTADISTICAS POR JUGADOR
-3- EJECUTAR CALCULARPUNTAJES PASANDOLE LOS DATOS QUE SOLICITA DE CADA GAMEID QUE CALCULA LOS PUNTAJES DE CADA JUGADOR EN UNA RONDA Y LOS GUARDA EN FIRESTORE, COLECCION JUGADORES, CAMPO PUNTAJERONDA[NUMERODERONDA].
-4- EJECUTAR PUNTAJEROSTER AGREGANDO EN EL COMANDO NPM EL NUMERO DE RONDA QUE CALCULA LOS PUNTAJES DE CADA ROSTER EN LA RONDA INGRESADA, CREA EL CAMPO RONDAXPUNTOS Y LO GUARDA, Y CREA EL CAMPO TOTALPUNTOS Y ACUMULA LOS PUNTAJES DE LAS RONDAS JUGADAS.
-5- EJECUTAR TOP5PROMEDIOS
-6- EJECUTAR TOP5SELECCIONADOS
-7- EJECUTAR ROSTER IDEAL
-8- EJECUTAR CARGAR
+1- Ejecutar npm run fetch-series que busca los gameId de una seir y crea un json en data/series como "NOMBREQUIPOvsNOMBREEQUIPO"
+2- Ejecutar npm run processGameData pasandole el nombre del json deseado de data/seriesque crea 2 archivos json en data/gamedata/           NOMBREQUIPOvsNOMBREEQUIPO:
+    Objectives: guarda estadísticas por equipo
+    Playerstats: guarda estadísticas por jugador
+3- Ejecutar npm run calcularPuntajes # pasandole los datos que solicita de cada gameId. Calcula los puntajes de cada jugador en una ronda y los guarda en FS, colección jugadores, campo puntajeronda[numeroronda]
+4- Ejecutar npm run puntajeRosters # que calcula los puntajes de cada roster en la ronda ingresada y lo guarda en la FS
+5- Ejecutar npm run promedios
+6- Ejecutar npm run seleccionados
+7- Ejecutar npm run rosterideal
+8- Actualizar archivo utils/jugadorespermitidos con los jugadores correspondientes
+9- Ejecutar npm run cargar que actualiza los jugadores permitidos para la proxima ronda
+10- Cambiar manualmente la partida de la proxima ronda en FS, coleccion partidas del dia. La info la sacas de la coleccion clubes.

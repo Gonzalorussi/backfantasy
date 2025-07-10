@@ -1,0 +1,52 @@
+{
+  "serieId": "113470922758215211",
+  "league": "MSI",
+  "teams": [
+    "Movistar KOI",
+    "BILIBILI GAMING DREAMSMART"
+  ],
+  "startTime": "2025-07-03T19:00:00Z",
+  "state": "completed",
+  "games": [
+    {
+      "gameId": "113470922758215212",
+      "state": "completed",
+      "teams": {
+        "blue": "Movistar KOI",
+        "red": "BILIBILI GAMING DREAMSMART"
+      }
+    },
+    {
+      "gameId": "113470922758215213",
+      "state": "completed",
+      "teams": {
+        "blue": "Movistar KOI",
+        "red": "BILIBILI GAMING DREAMSMART"
+      }
+    },
+    {
+      "gameId": "113470922758215214",
+      "state": "completed",
+      "teams": {
+        "blue": "BILIBILI GAMING DREAMSMART",
+        "red": "Movistar KOI"
+      }
+    },
+    {
+      "gameId": "113470922758215215",
+      "state": "completed",
+      "teams": {
+        "blue": "Movistar KOI",
+        "red": "BILIBILI GAMING DREAMSMART"
+      }
+    },
+    {
+      "gameId": "113470922758215216",
+      "state": "unneeded",
+      "teams": {
+        "blue": "BILIBILI GAMING DREAMSMART",
+        "red": "Movistar KOI"
+      }
+    }
+  ]
+}

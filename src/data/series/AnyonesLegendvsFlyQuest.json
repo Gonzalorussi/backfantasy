@@ -1,0 +1,52 @@
+{
+  "serieId": "113470922758215199",
+  "league": "MSI",
+  "teams": [
+    "Anyone's Legend",
+    "FlyQuest"
+  ],
+  "startTime": "2025-07-03T00:00:00Z",
+  "state": "completed",
+  "games": [
+    {
+      "gameId": "113470922758215200",
+      "state": "completed",
+      "teams": {
+        "blue": "Anyone's Legend",
+        "red": "FlyQuest"
+      }
+    },
+    {
+      "gameId": "113470922758215201",
+      "state": "completed",
+      "teams": {
+        "blue": "Anyone's Legend",
+        "red": "FlyQuest"
+      }
+    },
+    {
+      "gameId": "113470922758215202",
+      "state": "completed",
+      "teams": {
+        "blue": "FlyQuest",
+        "red": "Anyone's Legend"
+      }
+    },
+    {
+      "gameId": "113470922758215203",
+      "state": "completed",
+      "teams": {
+        "blue": "Anyone's Legend",
+        "red": "FlyQuest"
+      }
+    },
+    {
+      "gameId": "113470922758215204",
+      "state": "unneeded",
+      "teams": {
+        "blue": "FlyQuest",
+        "red": "Anyone's Legend"
+      }
+    }
+  ]
+}

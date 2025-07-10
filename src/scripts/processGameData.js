@@ -33,6 +33,8 @@ rl.question('📁 Ingresá el nombre del archivo (sin .json) en /src/data/series
     const rawStart = new Date(serieData.startTime).getTime() + 6 * 60 * 60 * 1000;
     const roundedStart = Math.floor(rawStart / 10000) * 10000; // 10s = 10000ms
     const adjustedStartTime = new Date(roundedStart).toISOString();
+    
+
     console.log(`\n🕒 StartingTime usado para todos los endpoints: ${adjustedStartTime}`);
 
     for (const game of serieData.games) {
