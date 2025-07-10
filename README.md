@@ -12,7 +12,7 @@ FLUJO DE EJECUCION DE SCRIPTS
 2- Ejecutar npm run processGameData pasandole el nombre del json deseado de data/seriesque crea 2 archivos json en data/gamedata/           NOMBREQUIPOvsNOMBREEQUIPO:
     Objectives: guarda estadísticas por equipo
     Playerstats: guarda estadísticas por jugador
-3- Ejecutar npm run calcularPuntajes # pasandole los datos que solicita de cada gameId. Calcula los puntajes de cada jugador en una ronda y los guarda en FS, colección jugadores, campo puntajeronda[numeroronda]
+3- Ejecutar npm run calcularPuntajes pasandole los datos que solicita de cada gameId. Calcula los puntajes de cada jugador en una ronda y los guarda en FS, colección jugadores, campo puntajeronda[numeroronda]
 4- Ejecutar npm run puntajeRosters # que calcula los puntajes de cada roster en la ronda ingresada y lo guarda en la FS
 5- Ejecutar npm run promedios
 6- Ejecutar npm run seleccionados

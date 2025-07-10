@@ -33,6 +33,16 @@ rl.question('📁 Ingresá el nombre del archivo (sin .json) en /src/data/series
     const rawStart = new Date(serieData.startTime).getTime() + 6 * 60 * 60 * 1000;
     const roundedStart = Math.floor(rawStart / 10000) * 10000; // 10s = 10000ms
     const adjustedStartTime = new Date(roundedStart).toISOString();
+    //const now = new Date();
+//const fixedStart = new Date(Date.UTC(
+ // now.getFullYear(),
+//  now.getMonth(),
+//  now.getDate(),
+//  4, // 01:30 ARG son 04:30 UTC
+//  30,
+//  0
+//));
+//const adjustedStartTime = fixedStart.toISOString();
     
 
     console.log(`\n🕒 StartingTime usado para todos los endpoints: ${adjustedStartTime}`);
