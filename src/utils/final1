@@ -1,0 +1,112 @@
+[
+    {
+                        "id": "99566404812254466",
+                    	"esportsPlayerId": "99566404812254466",
+                    	"summonerName": "ALFlandre",
+                        "name": "Flandre",
+                        "firstName": "Xuan-jun",
+                        "lastName": "Li",
+                        "image": "http://static.lolesports.com/players/1632953103867_edg-flandre-w21.png",
+                        "role": "top",
+			            "valor": 12
+                    },
+                    {
+                        "id": "99871276342823057",
+                    	"esportsPlayerId": "99871276342823057",
+                    	"summonerName": "ALTarzan",
+                        "name": "Tarzan",
+                        "firstName": "Seungyong",
+                        "lastName": "Lee",
+                        "image": "http://static.lolesports.com/players/1726483637877_WBG.Tarzan-24--_0531-01_531.png",
+                        "role": "jungle",
+			            "valor": 12.5
+                    },
+                    {
+                        "id": "104287400430814502",
+                    	"esportsPlayerId": "104287400430814502",
+                    	"summonerName": "ALShanks",
+                        "name": "Shanks",
+                        "firstName": "Xiao-Jun",
+                        "lastName": "Cui",
+                        "image": "http://static.lolesports.com/players/1593136280712_we-shanks-web.png",
+                        "role": "mid",
+			            "valor": 11
+                    },
+                    {
+                        "id": "99566404819916503",
+                    	"esportsPlayerId": "99566404819916503",
+                    	"summonerName": "ALHope",
+                        "name": "Hope",
+                        "firstName": "Jie",
+                        "lastName": "Wang",
+                        "image": "http://static.lolesports.com/players/1593128664245_edg-hope-web.png",
+                        "role": "bottom",
+			            "valor": 11
+                    },
+                    {
+                        "id": "105530584812980593",
+                    	"esportsPlayerId": "105530584812980593",
+                    	"summonerName": "ALKael",
+                        "name": "Kael",
+                        "firstName": "Jinhong",
+                        "lastName": "Kim",
+                        "image": "http://static.lolesports.com/players/1686475571604_LSB_Kael.png",
+                        "role": "support",
+			            "valor": 10.5
+                    },
+                    {
+                        "id": "99871276342168416",
+                    	"esportsPlayerId": "99871276342168416",
+                    	"summonerName": "GEN Chovy",
+                        "name": "Chovy",
+                        "firstName": "Jihun",
+                        "lastName": "Jung",
+                        "image": "http://static.lolesports.com/players/1739366567387_image6-2025-02-12T142206.796.png",
+                        "role": "mid",
+                        "valor": 13.5
+                    },
+                    {
+                        "id": "99566404532924465",
+                    	"esportsPlayerId": "99566404532924465",
+                    	"summonerName": "GEN Kiin",
+                        "name": "Kiin",
+                        "firstName": "Kiin",
+                        "lastName": "Kim",
+                        "image": "http://static.lolesports.com/players/1739366332547_image6-2025-02-12T141814.390.png",
+                        "role": "top",
+                        "valor": 12.5
+                    },
+                    {
+                        "id": "100725844994345151",
+                    	"esportsPlayerId": "100725844994345151",
+                    	"summonerName": "GEN Canyon",
+                        "name": "Canyon",
+                        "firstName": "Gunbu",
+                        "lastName": "Kim",
+                        "image": "http://static.lolesports.com/players/1739366773990_image6-2025-02-12T142548.171.png",
+                        "role": "jungle",
+                        "valor": 14
+                    },
+                    {
+                        "id": "98767975906852059",
+                    	"esportsPlayerId": "98767975906852059",
+                    	"summonerName": "GEN Ruler",
+                        "name": "Ruler",
+                        "firstName": "Jaehyeok",
+                        "lastName": "Park",
+                        "image": "http://static.lolesports.com/players/1739366246693_image6-2025-02-12T141534.718.png",
+                        "role": "bottom",
+                        "valor": 14
+                    },
+                    {
+                        "id": "107454956790371682",
+                    	"esportsPlayerId": "107454956790371682",
+                    	"summonerName": "GEN Duro",
+                        "name": "Duro",
+                        "firstName": "Mingyu",
+                        "lastName": "Ju",
+                        "image": "http://static.lolesports.com/players/1739366472306_image6-2025-02-12T141939.783.png",
+                        "role": "support",
+                        "valor": 10.5
+                    }
+]
