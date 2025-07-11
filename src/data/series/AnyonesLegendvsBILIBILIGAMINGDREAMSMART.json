@@ -1,0 +1,52 @@
+{
+  "serieId": "113470922758215259",
+  "league": "MSI",
+  "teams": [
+    "Anyone's Legend",
+    "BILIBILI GAMING DREAMSMART"
+  ],
+  "startTime": "2025-07-11T00:00:00Z",
+  "state": "completed",
+  "games": [
+    {
+      "gameId": "113470922758215260",
+      "state": "completed",
+      "teams": {
+        "blue": "Anyone's Legend",
+        "red": "BILIBILI GAMING DREAMSMART"
+      }
+    },
+    {
+      "gameId": "113470922758215261",
+      "state": "completed",
+      "teams": {
+        "blue": "BILIBILI GAMING DREAMSMART",
+        "red": "Anyone's Legend"
+      }
+    },
+    {
+      "gameId": "113470922758215262",
+      "state": "completed",
+      "teams": {
+        "blue": "BILIBILI GAMING DREAMSMART",
+        "red": "Anyone's Legend"
+      }
+    },
+    {
+      "gameId": "113470922758215263",
+      "state": "unneeded",
+      "teams": {
+        "blue": "BILIBILI GAMING DREAMSMART",
+        "red": "Anyone's Legend"
+      }
+    },
+    {
+      "gameId": "113470922758215264",
+      "state": "unneeded",
+      "teams": {
+        "blue": "Anyone's Legend",
+        "red": "BILIBILI GAMING DREAMSMART"
+      }
+    }
+  ]
+}

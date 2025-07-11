@@ -14,10 +14,10 @@ const rl = readline.createInterface({
 });
 
 async function main() {
-  rl.question("Número de ronda (1 a 13): ", async (input) => {
+  rl.question("Número de ronda (1 a 14): ", async (input) => {
     const rondaNum = parseInt(input);
-    if (isNaN(rondaNum) || rondaNum < 1 || rondaNum > 13) {
-      console.log("Ronda inválida, debe ser un número entre 1 y 13.");
+    if (isNaN(rondaNum) || rondaNum < 1 || rondaNum > 14) {
+      console.log("Ronda inválida, debe ser un número entre 1 y 14.");
       rl.close();
       return;
     }

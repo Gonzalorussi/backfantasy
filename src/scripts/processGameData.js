@@ -34,15 +34,15 @@ rl.question('📁 Ingresá el nombre del archivo (sin .json) en /src/data/series
     const roundedStart = Math.floor(rawStart / 10000) * 10000; // 10s = 10000ms
     const adjustedStartTime = new Date(roundedStart).toISOString();
     //const now = new Date();
-//const fixedStart = new Date(Date.UTC(
- // now.getFullYear(),
-//  now.getMonth(),
-//  now.getDate(),
-//  4, // 01:30 ARG son 04:30 UTC
-//  30,
-//  0
-//));
-//const adjustedStartTime = fixedStart.toISOString();
+    //const fixedStart = new Date(Date.UTC(
+    //  now.getFullYear(),
+    //  now.getMonth(),
+    //  now.getDate(),
+    //  4, // 01:30 ARG son 04:30 UTC
+    //  0,
+    //  0
+    //));
+    //const adjustedStartTime = fixedStart.toISOString();
     
 
     console.log(`\n🕒 StartingTime usado para todos los endpoints: ${adjustedStartTime}`);

@@ -1,5 +1,5 @@
 [
-    {
+                    {
                         "id": "99566404812254466",
                     	"esportsPlayerId": "99566404812254466",
                     	"summonerName": "ALFlandre",
@@ -8,7 +8,7 @@
                         "lastName": "Li",
                         "image": "http://static.lolesports.com/players/1632953103867_edg-flandre-w21.png",
                         "role": "top",
-			"valor": 12
+			            "valor": 12
                     },
                     {
                         "id": "99871276342823057",
@@ -19,7 +19,7 @@
                         "lastName": "Lee",
                         "image": "http://static.lolesports.com/players/1726483637877_WBG.Tarzan-24--_0531-01_531.png",
                         "role": "jungle",
-			"valor": 12.5
+			            "valor": 12.5
                     },
                     {
                         "id": "104287400430814502",
@@ -30,7 +30,7 @@
                         "lastName": "Cui",
                         "image": "http://static.lolesports.com/players/1593136280712_we-shanks-web.png",
                         "role": "mid",
-			"valor": 11
+			            "valor": 11
                     },
                     {
                         "id": "99566404819916503",
@@ -41,7 +41,7 @@
                         "lastName": "Wang",
                         "image": "http://static.lolesports.com/players/1593128664245_edg-hope-web.png",
                         "role": "bottom",
-			"valor": 11
+			            "valor": 11
                     },
                     {
                         "id": "105530584812980593",
@@ -52,61 +52,61 @@
                         "lastName": "Kim",
                         "image": "http://static.lolesports.com/players/1686475571604_LSB_Kael.png",
                         "role": "support",
-			"valor": 10.5
+			            "valor": 10.5
                     },
-		    {
-                        "id": "99566404803543690",
-                    	"esportsPlayerId": "99566404803543690",
-                    	"summonerName": "BLGKnight",
-                        "name": "knight",
-                        "firstName": "Ding",
-                        "lastName": "Zhuo",
-                        "image": "http://static.lolesports.com/players/1726482000923_BLG.Knight-24--_0604-10_36.png",
+                    {
+                        "id": "102186485482484390",
+                    	"esportsPlayerId": "102186485482484390",
+                    	"summonerName": "T1 Doran",
+                        "name": "Doran",
+                        "firstName": "Hyeonjun",
+                        "lastName": "Choi",
+                        "image": "http://static.lolesports.com/players/1739362891866_image6-2025-02-12T132101.302.png",
+                        "role": "top",
+                        "valor": 12
+                    },
+                    {
+                        "id": "98767991747728851",
+                    	"esportsPlayerId": "98767991747728851",
+                    	"summonerName": "T1 Faker",
+                        "name": "Faker",
+                        "firstName": "Sanghyeok",
+                        "lastName": "Lee",
+                        "image": "http://static.lolesports.com/players/1739362804068_image6-2025-02-12T131922.060.png",
                         "role": "mid",
+                        "valor": 14
+                    },
+                    {
+                        "id": "103495716775975785",
+                    	"esportsPlayerId": "103495716775975785",
+                    	"summonerName": "T1 Gumayusi",
+                        "name": "Gumayusi",
+                        "firstName": "Minhyung",
+                        "lastName": "Lee",
+                        "image": "http://static.lolesports.com/players/1739362710416_image6-2025-02-12T131756.204.png",
+                        "role": "bottom",
+                        "valor": 12.5
+                    },
+                    {
+                        "id": "103495716561790834",
+                    	"esportsPlayerId": "103495716561790834",
+                    	"summonerName": "T1 Keria",
+                        "name": "Keria",
+                        "firstName": "Minseok",
+                        "lastName": "Ryu",
+                        "image": "http://static.lolesports.com/players/1739362613410_image6-2025-02-12T131347.293.png",
+                        "role": "support",
                         "valor": 13.5
                     },
                     {
-                        "id": "107597339246973242",
-                    	"esportsPlayerId": "107597339246973242",
-                    	"summonerName": "BLGBeichuan",
-                        "name": "Beichuan",
-                        "firstName": "LING",
-                        "lastName": "YANG",
-                        "image": "http://static.lolesports.com/players/1641805097545_placeholder.png",
+                        "id": "105320682452092471",
+                    	"esportsPlayerId": "105320682452092471",
+                    	"summonerName": "T1 Oner",
+                        "name": "Oner",
+                        "firstName": "HYUNJUN",
+                        "lastName": "MUN",
+                        "image": "http://static.lolesports.com/players/1739362366214_image6-2025-02-12T131208.507.png",
                         "role": "jungle",
-                        "valor": 11
-                    },
-                    {
-                        "id": "106368692529261498",
-                    	"esportsPlayerId": "99566404803543690",
-                    	"summonerName": "BLGElk",
-                        "name": "Elk",
-                        "firstName": "Jiahao",
-                        "lastName": "Zhao",
-                        "image": "http://static.lolesports.com/players/1726481996529_BLG.ElK-24--1_0604-10_351.png",
-                        "role": "bottom",
-                        "valor": 13
-                    },
-                    {
-                        "id": "103478281356330346",
-                    	"esportsPlayerId": "103478281356330346",
-                    	"summonerName": "BLGBin",
-                        "name": "Bin",
-                        "firstName": "Ze-Bin",
-                        "lastName": "Chen",
-                        "image": "http://static.lolesports.com/players/1726481990505_BLG.Bin-24--1_0604-10_391.png",
-                        "role": "top",
-                        "valor": 13
-                    },
-                    {
-                        "id": "110547957837987327",
-                    	"esportsPlayerId": "110547957837987327",
-                    	"summonerName": "BLGON",
-                        "name": "ON",
-                        "firstName": "WENJUN",
-                        "lastName": "LUO",
-                        "image": "http://static.lolesports.com/players/1726482010725_BLG.On-24--1_0604-10_361.png",
-                        "role": "support",
-                        "valor": 11
+			            "valor": 13
                     }
 ]
